@@ -10,7 +10,7 @@ const Card = () => {
             <div className="card">
                 <div className="initial">
                     <img src={piggyLogo} className="card__image" alt="Piggy-Bank logo"/>
-                    <h2 className="initial__title">Budgeting</h2>
+                    <h2 className="initial__title">Finance</h2>
                 </div>
                 <div className="card__content">
                     <p className="card__title">Budgeting</p>
