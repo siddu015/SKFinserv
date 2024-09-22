@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SectionButton from "./sectionButton.jsx";
-import piggyLogo from './assets/PiggyBank.png'
+import piggyLogo from '../assets/PiggyBank.png'
 
 
 const Card = () => {
@@ -20,7 +20,7 @@ const Card = () => {
                         It’s a plan to spend!!
                     </p>
                     <div className="card__button-wrapper">
-                        <a href="/">
+                        <a href="/skfinserv/public">
                             <SectionButton/>
                         </a>
                     </div>
