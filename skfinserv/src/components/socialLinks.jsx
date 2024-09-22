@@ -133,8 +133,6 @@ const SocialLinks = () => {
                         </svg>
                     </div>
                 </div>
-                <img src="./assets/PiggyBank.png" alt="Piggy Bank" className="card__image"/>
-
             </div>
         </StyledWrapper>
     );

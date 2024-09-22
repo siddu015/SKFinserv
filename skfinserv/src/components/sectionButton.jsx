@@ -11,7 +11,7 @@ const SectionButton = () => {
 
 const StyledWrapper = styled.div`
   button {
-  font-size: 18px;
+  font-size: 14px;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -32,8 +32,8 @@ button:hover {
 
 button:focus:after,
 button:hover:after {
-  width: 100%;
-  left: 0%;
+  width: 90%;
+  left: 5%;
 }
 
 button:after {

@@ -1,20 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import SectionButton from "./sectionButton.jsx";
+import piggyLogo from './assets/PiggyBank.png'
+
 
 const Card = () => {
     return (
         <StyledWrapper>
             <div className="card">
-                <img src="./assets/PiggyBank.png" alt="Piggy Bank" className="card__image" />
+                <div className="initial">
+                    <img src={piggyLogo} className="card__image" alt="Piggy-Bank logo"/>
+                    <h2 className="initial__title">Budgeting</h2>
+                </div>
                 <div className="card__content">
-                    <p className="card__title">Card Title</p>
+                    <p className="card__title">Budgeting</p>
                     <p className="card__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco.
+                        It’s not your salary that makes you wealthy; It’s your spending habits.
+                        Budget is not a plan to save
+                        It’s a plan to spend!!
                     </p>
-                    <SectionButton />
+                    <div className="card__button-wrapper">
+                        <a href="/">
+                            <SectionButton/>
+                        </a>
+                    </div>
                 </div>
             </div>
         </StyledWrapper>
@@ -24,25 +33,40 @@ const Card = () => {
 const StyledWrapper = styled.div`
     .card {
         position: relative;
-        width: 300px;
-        height: 350px; /* Increased height to accommodate image */
+        width: 250px;
+        height: 200px;
         background-color: rgba(10, 28, 64, 0.98);
-        border-radius: 10px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column; /* Allows stacking of image and content */
         align-items: center;
-        justify-content: flex-start; /* Aligns items at the top */
+        justify-content: center; /* Aligns items at the top */
         overflow: hidden;
-        perspective: 1000px;
         box-shadow: 0 0 0 5px #ffffff80;
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
+    .initial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.6s ease-in-out;
+    }
+
+
     .card__image {
-        width: 80px;
+        width: 120px;
         height: auto;
-        margin-top: 20px;
+        margin-bottom: 10px;
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .initial__title {
+        //color: #ffffff;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
     }
 
     .card:hover {
@@ -52,12 +76,17 @@ const StyledWrapper = styled.div`
 
     .card__content {
         position: absolute;
-        bottom: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         padding: 20px;
         box-sizing: border-box;
         background-color: #3980A9;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         transform: rotateX(-90deg);
         transform-origin: bottom;
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -68,21 +97,30 @@ const StyledWrapper = styled.div`
     }
 
     .card__title {
-        margin: 10px 0 0;
-        font-size: 24px;
+        margin: 0;
+        font-size: 28px;
         color: #ffffff;
         font-weight: 700;
+        align-self: flex-start;
     }
 
     .card__description {
         margin: 10px 0 0;
-        font-size: 14px;
-        color: #ffffff;
+        font-size: 18px;
         line-height: 1.4;
+        text-align: left;
+        flex-grow: 1;
     }
 
     .card:hover .card__image {
         scale: 1.1; /* Scales up the image on hover */
+    }
+
+    .card__button-wrapper {
+        align-self: flex-start;
+        margin-top: auto; 
+        margin-left: -15px;
+        margin-bottom: 20px;
     }
 `;
 
