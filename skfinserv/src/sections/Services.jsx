@@ -82,7 +82,7 @@ const StyledSection = styled.section`
 const StyledHeading = styled.h2`
     text-align: center;
     font-size: 2.5rem;
-    color: #001f54;
+    color: rgba(0, 0, 0);
     margin-bottom: 40px; // Increased margin to provide more spacing between heading and content
     font-weight: bold;
     letter-spacing: 0.05em; // Slight letter spacing for improved readability
