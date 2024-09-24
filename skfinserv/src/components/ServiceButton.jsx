@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SectionButton = () => {
+const ServiceButton = () => {
     return (
         <StyledWrapper>
             <button>Know More</button>
@@ -51,4 +51,4 @@ button:after {
 }
 `;
 
-export default SectionButton;
+export default ServiceButton;

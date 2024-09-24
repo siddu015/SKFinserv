@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /* Define the light color scheme */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #ffffff;
@@ -13,28 +14,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* General link styles */
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: #535bf2;
 }
 
+/* Body styling to ensure full-width alignment */
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f1f1f1;
 }
 
+/* Headings and typography adjustments */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.2;
+  color: #213547;
+  margin: 1.5em 0;
 }
 
+/* Button styles */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -46,6 +55,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -54,15 +64,44 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Footer disclaimer and alignments */
+.footer-disclaimer {
+  text-align: justify;
+  font-size: 0.9rem;
+  margin: 1em 0;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-  a:hover {
-    color: #747bff;
+
+  .card {
+    padding: 1.5em;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .footer-container {
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-disclaimer {
+    text-align: left;
   }
 }

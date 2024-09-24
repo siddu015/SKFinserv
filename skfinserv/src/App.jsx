@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import SocialLinks from "./components/socialLinks.jsx";
-import Card from "./components/card.jsx";
+import Services from "./sections/Services.jsx";
+import footer from "./sections/footer.jsx";
+import Footer from "./sections/footer.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-        <SocialLinks/>
-        <Card/>
+        <Services/>
+        <Footer/>
     </>
   )
 }
