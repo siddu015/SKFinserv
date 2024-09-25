@@ -167,10 +167,10 @@ const Disclaimer = styled.div`
     flex-wrap: wrap;
     box-sizing: border-box;
     text-align: left;
-
     border-top: 1px solid black;
+    
     @media (max-width: 768px) {
-        padding: 40px 20px;  /* Keep padding on smaller screens */
+        padding: 40px 40px;  /* Keep padding on smaller screens */
     }
 `;
 
@@ -227,14 +227,16 @@ const FooterBottom = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: 80px;  /* Let the content dictate the height */
+    height: 100px;  /* Let the content dictate the height */
     position: relative;  /* Remove absolute positioning */
     bottom: 0;
     left: 0;
+    text-align: center;  /* Center text on small screens */
 
     @media (max-width: 768px) {
-        height: auto;
         padding: 10px 20px;
+        flex-direction: column;  /* Stack items on small screens */
+        align-items: center;  /* Center align items */
     }
 `;
 
@@ -262,6 +264,11 @@ const Left = styled.div`
     &:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+        text-align: center;  /* Center text on small screens */
+        margin-bottom: 1rem;  /* Add space between items */
+    }
 `;
 
 const Middle = styled.div`
@@ -271,13 +278,23 @@ const Middle = styled.div`
     &:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+        margin-bottom: 1rem;  /* Add space between items */
+    }
 `;
 
 const Right = styled.div`
     flex: 1;
     text-align: right;
+
     &:hover {
         text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;  /* Center text on small screens */
+        margin-bottom: 1rem;  /* Add space between items */
     }
 `;
 
