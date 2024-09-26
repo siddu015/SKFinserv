@@ -8,7 +8,7 @@ import Home from "./sections/home.jsx";
 function App() {
   return (
     <>
-        <Header/>
+        <Header isRootPage={true} />
         <Home/>
         <Services/>
         <Footer/>

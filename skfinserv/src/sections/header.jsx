@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PortfolioLogin from "../components/portfolioLogin.jsx";
 
-const Header = () => {
+const Header = ({ isRootPage }) => {
     const [scroll, setScroll] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,34 +18,40 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const handleNavLinkClick = () => {
+        if (menuOpen) {
+            setMenuOpen(false); // Close the dropdown when a nav link is clicked
+        }
+    };
+
     return (
-        <HeaderWrapper scroll={scroll}>
+        <HeaderWrapper scroll={scroll} isRootPage={isRootPage}>
             <Container>
-                <Logo scroll={scroll}>SK Finserv</Logo>
+                <Logo scroll={scroll} isRootPage={isRootPage}>SK Finserv</Logo>
                 <NavContainer>
-                    <Nav scroll={scroll} menuOpen={menuOpen}>
+                    <Nav scroll={scroll} isRootPage={isRootPage} menuOpen={menuOpen}>
                         <ul>
-                            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-                            <li><a href="#services" onClick={toggleMenu}>Services</a></li>
-                            <li><a href="#about" onClick={toggleMenu}>About Us</a></li>
-                            <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
+                            <li><a href="/" onClick={handleNavLinkClick}>Home</a></li>
+                            <li><a href="/services" onClick={handleNavLinkClick}>Services</a></li>
+                            <li><a href="/aboutUs" onClick={handleNavLinkClick}>About Us</a></li>
+                            <li><a href="/contactUs" onClick={handleNavLinkClick}>Contact Us</a></li>
                         </ul>
                     </Nav>
                     <ToggleMenuButton scroll={scroll} onClick={toggleMenu}>
                         &#9776; {/* Hamburger icon */}
                     </ToggleMenuButton>
                     <PortfolioLoginButton>
-                        <PortfolioLogin />
+                        <PortfolioLogin/>
                     </PortfolioLoginButton>
                 </NavContainer>
             </Container>
             {menuOpen && (
                 <DropdownMenu>
                     <ul>
-                        <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-                        <li><a href="#services" onClick={toggleMenu}>Services</a></li>
-                        <li><a href="#about" onClick={toggleMenu}>About Us</a></li>
-                        <li><a href="#contact" onClick={toggleMenu}>Contact Us</a></li>
+                        <li><a href="/" onClick={handleNavLinkClick}>Home</a></li>
+                        <li><a href="/services" onClick={handleNavLinkClick}>Services</a></li>
+                        <li><a href="/aboutUs" onClick={handleNavLinkClick}>About Us</a></li>
+                        <li><a href="/contactUs" onClick={handleNavLinkClick}>Contact Us</a></li>
                     </ul>
                 </DropdownMenu>
             )}
@@ -61,28 +67,29 @@ const HeaderWrapper = styled.header`
     width: 100%;
     font-family: 'Castoro', serif;
     padding: ${({ scroll }) => (scroll ? "5px 0" : "15px 0")};
-    background-color: ${({ scroll }) => (scroll ? "white" : "transparent")};
+    background-color: ${({ scroll, isRootPage }) =>
+            isRootPage && !scroll ? "transparent" : "white"};
     transition: background-color 0.3s ease, padding 0.3s ease;
     z-index: 1000;
-    box-shadow: ${({ scroll }) => (scroll ? "0 2px 10px rgba(0, 0, 0, 0.1)" : "none")};
+    box-shadow: ${({ scroll, isRootPage }) =>
+            (isRootPage && !scroll ? "none" : "0 2px 10px rgba(0, 0, 0, 0.1)")};
 `;
 
 const Container = styled.div`
     width: 100%;
     max-width: 1200px;
-    margin: auto; /* Centers the container */
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px; /* Keep horizontal padding for smaller screens only */
+    padding: 0 10px;
 `;
 
 const Logo = styled.h1`
     font-size: 1.75rem;
     font-weight: bold;
-    color: ${({ scroll }) => (scroll ? "black" : "white")};
+    color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     transition: color 0.3s ease;
-    font-family: 'Castoro', serif; /* Add this line for font family */
     padding-left: 10px;
 
     @media (min-width: 769px) {
@@ -100,16 +107,15 @@ const ToggleMenuButton = styled.button`
     font-size: 1.8rem;
     background: none;
     border: none;
-    color: ${({ scroll }) => (scroll ? "black" : "white")};
+    color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     cursor: pointer;
     display: block;
     position: relative;
     right: 0;
-    order: 1; /* Place the portfolio login before the menu toggle button */
-    
+    order: 1;
 
     @media (min-width: 769px) {
-        display: none; /* Hide the menu button on larger screens */
+        display: none;
     }
 `;
 
@@ -122,7 +128,7 @@ const Nav = styled.nav`
 
         li {
             a {
-                color: ${({ scroll }) => (scroll ? "black" : "white")};
+                color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")}; /* Updated for link color */
                 text-decoration: none;
                 font-size: 1.1rem;
                 transition: color 0.3s ease;
@@ -136,7 +142,7 @@ const Nav = styled.nav`
 
     @media (max-width: 768px) {
         ul {
-            display: none; /* Hide on mobile as the dropdown will handle it */
+            display: none;
         }
     }
 `;
@@ -169,7 +175,7 @@ const DropdownMenu = styled.div`
 
         li {
             a {
-                color: black;
+                color: black; // Always black in dropdown
                 text-decoration: none;
                 font-size: 1rem;
 

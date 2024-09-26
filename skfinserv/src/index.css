@@ -1,24 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Proxima Nova', sans-serif; /* Set as the universal font */
   line-height: 1.5;
   font-weight: 400;
-
-  /* Define the light color scheme */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #ffffff;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* Body styling to ensure full-width alignment */
 body {
@@ -52,43 +52,3 @@ button {
   transition: border-color 0.25s;
 }
 
-/* Footer disclaimer and alignments */
-.footer-disclaimer {
-  text-align: justify;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-images {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .card {
-    padding: 1.5em;
-  }
-
-  .footer-container {
-    padding: 1.5em;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .footer-disclaimer {
-    text-align: left;
-  }
-}
