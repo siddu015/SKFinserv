@@ -59,6 +59,7 @@ const HeaderWrapper = styled.header`
     top: 0;
     left: 0;
     width: 100%;
+    font-family: 'Castoro', serif;
     padding: ${({ scroll }) => (scroll ? "5px 0" : "15px 0")};
     background-color: ${({ scroll }) => (scroll ? "white" : "transparent")};
     transition: background-color 0.3s ease, padding 0.3s ease;
@@ -77,12 +78,16 @@ const Container = styled.div`
 `;
 
 const Logo = styled.h1`
-    font-size: 1.75rem !important;
+    font-size: 1.75rem;
     font-weight: bold;
     color: ${({ scroll }) => (scroll ? "black" : "white")};
     transition: color 0.3s ease;
-    margin-left: 16px; /* Adjust left margin */
-    margin-right: 32px;
+    font-family: 'Castoro', serif; /* Add this line for font family */
+    padding-left: 10px;
+
+    @media (min-width: 769px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const NavContainer = styled.div`

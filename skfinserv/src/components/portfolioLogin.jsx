@@ -14,7 +14,8 @@ const StyledWrapper = styled.div`
         display: inline-block;
         padding: 10px 20px; /* Default padding */
         font-size: 1.1rem; /* Default font size */
-        font-weight: bold;
+        font-weight: bolder;
+        font-family: 'Castoro', serif; /* Add this line for font family */
         text-align: center;
         text-decoration: none;
         color: #fff;
