@@ -12,8 +12,8 @@ const Button = () => {
 const StyledWrapper = styled.div`
     .comic-button {
         display: inline-block;
-        padding: 10px 20px;
-        font-size: 1.25rem; /* Match font size with header links */
+        padding: 10px 20px; /* Default padding */
+        font-size: 1.1rem; /* Default font size */
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -36,6 +36,21 @@ const StyledWrapper = styled.div`
             background-color: #ffffff;
             box-shadow: none;
             transform: translateY(4px);
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .comic-button {
+            padding: 8px 16px; /* Smaller padding for mobile */
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .comic-button {
+            padding: 6px 12px; /* Even smaller padding for smaller screens */
+            font-size: 0.9rem; /* Smaller font size for small screens */
         }
     }
 `;

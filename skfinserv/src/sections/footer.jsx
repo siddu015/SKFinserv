@@ -127,8 +127,7 @@ const About = styled.div`
 const GetInTouch = styled.div`
     flex: 1;  /* Ensure it takes equal width */
     text-align: justify;
-    margin-top: 40px;  /* Add margin for spacing */
-
+    
     h3 {
         font-size: 1.5rem;
         margin-bottom: 0.8rem;
@@ -176,6 +175,10 @@ const Disclaimer = styled.div`
 
 const DisclaimerText = styled.div`
     flex: 1;  /* Ensure equal width with About and Get in Touch */
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     p {
         margin: 10px 0;
         line-height: 1.6;
@@ -227,7 +230,7 @@ const FooterBottom = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: 100px;  /* Let the content dictate the height */
+    height: auto;  /* Let the content dictate the height */
     position: relative;  /* Remove absolute positioning */
     bottom: 0;
     left: 0;
