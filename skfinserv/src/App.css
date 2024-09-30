@@ -1,12 +1,12 @@
 /* Root container adjustment */
 #root {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /*max-width: 100%;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
 }
 
 /* Remove default margins and padding from all elements */
@@ -22,26 +22,4 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-
-/* Ensure footer stretches full width */
-footer {
-  width: 100%;
-  background: linear-gradient(to bottom, #5E98B9 8%, #5E98B9 66%);
-}
-
-.footer-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em;
-}
-
-.footer-bottom {
-  background-color: #0F2144;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
 }
