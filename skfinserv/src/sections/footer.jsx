@@ -47,13 +47,16 @@ const Footer = () => {
                 </Container>
             </FooterTop>
 
+            {/* Separator Line */}
+            <Separator />
+
             <Disclaimer>
                 <DContainer>
                     <DisclaimerSection>
                         <DisclaimerText>
                             <p className="bold-text">SK Finserv is an AMFI Registered Mutual Fund Distributor.</p>
                             <p>Disclaimer - Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved.</p>
-                            <p>SK Finserv makes no warranties or representations, express or implied, on products offered through the platform of SK Finserv . It accepts no liability for any damages or losses, however, caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable. Investments in Securities markets are subject to market risks, read all the related documents carefully before investing.</p>
+                            <p>SK Finserv makes no warranties or representations, express or implied, on products offered through the platform of SK Finserv. It accepts no liability for any damages or losses, however, caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable. Investments in Securities markets are subject to market risks, read all the related documents carefully before investing.</p>
                         </DisclaimerText>
                         <ImagesWrapper>
                             <img src={AMFI} alt="AMFI Registered" />
@@ -78,27 +81,19 @@ const Footer = () => {
 // Styled Components
 const FooterWrapper = styled.footer`
     width: 100%;
+    min-width: 100%;
     background: linear-gradient(to bottom, rgba(94, 152, 185, 0.3) 8%, rgba(94, 152, 185, 0.6) 66%);
-    
-
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-between;
-    //color: black;
-    //box-sizing: border-box;
-    //min-height: 100vh;  /* Make sure footer takes full height of the viewport */
-    //position: relative;  /* Ensure the footer stays at the bottom */
 `;
 
 const FooterTop = styled.div`
     padding: 50px 20px;
     margin-bottom: 2rem;
-    width: 100%;
-    //box-sizing: border-box;
-    //
-    //@media (max-width: 768px) {
-    //    //padding: 40px 20px;  
-    //}
+`;
+
+const Separator = styled.hr`
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid black;  /* Adjust the color and thickness as needed */
 `;
 
 const FooterSection = styled.div`
@@ -106,9 +101,9 @@ const FooterSection = styled.div`
     flex-direction: row;
     justify-content: space-between;
     text-align: justify;
+    min-width: 250px; 
+    width: 100%;
 
-
-    //width: 100%;
     h3 {
         font-size: 1.5rem;
         margin-bottom: 0.8rem;
@@ -124,18 +119,17 @@ const FooterSection = styled.div`
 `;
 
 const About = styled.div`
-    flex: 1;  /* Ensure it takes equal width */
+    flex: 1;
     margin-right: 100px;
-    //text-align: justify;
-    
+
     @media (max-width: 768px) {
         margin-right: 0;
     }
 `;
 
 const GetInTouch = styled.div`
-    flex: 1;  /* Ensure it takes equal width */
-
+    flex: 1;
+    
     div {
         display: flex;
         align-items: flex-start;
@@ -154,27 +148,10 @@ const GetInTouch = styled.div`
 `;
 
 const Disclaimer = styled.div`
-    //padding: 50px 20px; 
-    //border-top: 1px solid black;
-    //width: 100%;
-    //max-width: 1200px;
-    //margin: 0 auto;
-    //display: flex;
-    //justify-content: space-between;
-    //flex-direction: column;
-    //flex-wrap: wrap;
-    //box-sizing: border-box;
-    //text-align: left;
-    //border-top: 1px solid black;
-
     padding: 50px 20px;
-    margin-bottom: 2rem;
     width: 100%;
-
-    //@media (max-width: 768px) {
-    //    padding: 40px 40px;  /* Keep padding on smaller screens */
-    //}
 `;
+
 const DContainer = styled.div`
     width: 100%;
     max-width: 1200px;
@@ -184,12 +161,11 @@ const DContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    //box-sizing: border-box;
-/
-@media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;  /* Ensure alignment on smaller screens */
-}
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const DisclaimerSection = styled.div`
@@ -197,18 +173,22 @@ const DisclaimerSection = styled.div`
     flex-direction: column;
     justify-content: space-between;
     text-align: justify;
+    min-width: 250px;
+    width: 100%;
 
     p {
         line-height: 1.6;
     }
-    
+
 `;
+
 const DisclaimerText = styled.div`
-    flex: 1;  /* Ensure equal width with About and Get in Touch */
+    flex: 1;
 
     @media (max-width: 768px) {
         flex-direction: column;
     }
+
     p {
         margin: 10px 0;
         &.bold-text {
@@ -220,9 +200,9 @@ const DisclaimerText = styled.div`
 const ImagesWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;  /* Center images and text */
+    justify-content: center;
     align-items: center;
-    gap: 20px;  /* Add gap between items */
+    gap: 20px;
     margin: 20px 0;
 
     img {
@@ -237,13 +217,13 @@ const ImagesWrapper = styled.div`
     }
 
     p {
-        text-align: center;  /* Center text */
+        text-align: center;
         font-weight: bold;
-        margin: 0;  /* Adjust margins */
+        margin: 0;
     }
 
     @media (max-width: 768px) {
-        flex-direction: column;  /* Stack in small screens */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
@@ -258,16 +238,13 @@ const FooterBottom = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: auto;  /* Let the content dictate the height */
-    position: relative;  /* Remove absolute positioning */
-    bottom: 0;
-    left: 0;
-    text-align: center;  /* Center text on small screens */
+    height: auto;
+    text-align: center;
 
     @media (max-width: 768px) {
         padding: 10px 20px;
-        flex-direction: column;  /* Stack items on small screens */
-        align-items: center;  /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
 `;
 
@@ -280,11 +257,10 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    //box-sizing: border-box;
-/
+
     @media (max-width: 768px) {
         flex-direction: column;
-        align-items: center;  /* Ensure alignment on smaller screens */
+        align-items: center;
     }
 `;
 
@@ -297,8 +273,8 @@ const Left = styled.div`
     }
 
     @media (max-width: 768px) {
-        text-align: center;  /* Center text on small screens */
-        margin-bottom: 1rem;  /* Add space between items */
+        text-align: center;
+        margin-bottom: 1rem;
     }
 `;
 
@@ -311,7 +287,7 @@ const Middle = styled.div`
     }
 
     @media (max-width: 768px) {
-        margin-bottom: 1rem;  /* Add space between items */
+        margin-bottom: 1rem;
     }
 `;
 
@@ -324,11 +300,9 @@ const Right = styled.div`
     }
 
     @media (max-width: 768px) {
-        text-align: center;  /* Center text on small screens */
-        margin-bottom: 1rem;  /* Add space between items */
+        text-align: center;
+        margin-bottom: 1rem;
     }
 `;
-
-
 
 export default Footer;
