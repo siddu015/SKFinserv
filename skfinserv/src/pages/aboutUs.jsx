@@ -48,7 +48,7 @@ const AboutWrapper = styled.div`
 
 const ImageSection = styled.div`
     width: 100%;
-    height: 550px; /* Adjust height as needed */
+    height: 550px;
     overflow: hidden;
 
     img {
@@ -56,31 +56,61 @@ const ImageSection = styled.div`
         height: 100%;
         object-fit: cover;
     }
+
+    @media (max-width: 768px) {
+        height: 350px; /* Adjust height for smaller screens */
+    }
 `;
 
 const ContentSection = styled.div`
-    padding: 100px 130px; /* Adjust padding as needed */
+    padding: 50px 140px; /* Adjust padding as needed */
     text-align: center;
     margin-bottom: 2rem; /* Align with footer margin */
+
+    //@media (max-width: 1024px) {
+    //    max-width: 1000px; /* Adjust content width for medium screens */
+    //    padding: 0 30px; /* Maintain gaps for medium screens */
+    //}
+
+    @media (max-width: 768px) {
+        padding: 0 40px; /* Reduced padding for mobile */
+        max-width: 100%; /* Ensure full width on mobile */
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 40px; /* Further reduce padding on very small screens */
+    }
 `;
 
 const ContentBlock = styled.div`
-    margin: 20px 0; /* Even gap between content blocks */
 
-    h2 {
+    margin: 20px 0;
+    text-align: center; /* Center-align headings */
+
+    h2, h3 {
         margin: 20px 0;
         font-size: 2rem;
     }
 
-    h3 {
-        margin: 15px 0;
-        font-size: 1.5rem;
+    p {
+        margin: 10px 0;
+        text-align: justify;
+        line-height: 1.6;
     }
 
-    p {
-        text-align: justify;
-        margin: 10px 0;
-        line-height: 1.6;
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 1024px) {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 
     @media (max-width: 768px) {
@@ -96,6 +126,21 @@ const ContentBlock = styled.div`
             font-size: 0.9rem;
         }
     }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    
 `;
 
 export default AboutUs;
