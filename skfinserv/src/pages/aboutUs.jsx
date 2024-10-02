@@ -17,7 +17,14 @@ const AboutUs = () => {
                         <ContentBlock>
                             <h2>We Began</h2>
                             <p>
-                                Personal finance is more personal than finance. “Advice What's Right" has been the philosophy that has driven the organization since inception. We intend to do things that are right for you. To us, it's not just managing your money but it is about managing your needs in the right way. With years of experience in managing personal finance, we have developed a unique trust amongst our clients. Our "Dream It - Plan It" ideology has helped us in keeping the client's interest at the forefront, thereby establishing a long-term trustworthy relation. We are a handful of people who are passionate about what they do. SK Finserv was founded over a decade ago and since then a consistent and adaptable team has been a key factor for SK Finserv.
+                                Personal finance is more personal than finance.
+                                “Advice What's Right" has been the philosophy that has driven the organization since inception.
+                                We intend to do things that are right for you.
+                                To us, it's not just managing your money but it is about managing your needs in the right way.
+                                With years of experience in managing personal finance, we have developed a unique trust amongst our clients.
+                                Our "Dream It - Plan It" ideology has helped us in keeping the client's interest at the forefront, thereby establishing a long-term trustworthy relation.
+                                We are a handful of people who are passionate about what they do.
+                                SK Finserv was founded over a decade ago and since then a consistent and adaptable team has been a key factor for SK Finserv.
                             </p>
                         </ContentBlock>
                         <ContentBlock>
@@ -29,10 +36,16 @@ const AboutUs = () => {
                         <ContentBlock>
                             <h3>Founders</h3>
                             <p>
-                                Prasanth Reddy (founder) is an MBA graduate and personal finance expert. A self-starter and a dynamic leader who drives the overall strategic vision of the organization. He strives to seek simplicity in whatever he does.
+                                <b> Prasanth Reddy (founder) </b>
+                                is an MBA graduate and personal finance expert.
+                                A self-starter and a dynamic leader who drives the overall strategic vision of the organization.
+                                He strives to seek simplicity in whatever he does.
                             </p>
                             <p>
-                                Siva Jyothsna (co-founder) has done her Bachelor's in Computer Applications. An able administrator and an inspiring leader who oversees different precincts of the organization. She is an important part of the think-tank of the organization and is best at what she does.
+                                <b>Siva Jyothsna (co-founder) </b>
+                                has done her Bachelor's in Computer Applications.
+                                An able administrator and an inspiring leader who oversees different precincts of the organization.
+                                She is an important part of the think-tank of the organization and is best at what she does.
                             </p>
                         </ContentBlock>
                     </ContentSection>

@@ -59,14 +59,14 @@ const Header = ({ isRootPage }) => {
     );
 };
 
-// Styled Components
+
 const HeaderWrapper = styled.header`
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     font-family: 'Castoro', serif;
-    padding: ${({ scroll }) => (scroll ? "5px 0" : "15px 0")};
+    padding: ${({ scroll }) => (scroll ? "15px 20px" : "15px 20px")};
     background-color: ${({ scroll, isRootPage }) =>
             isRootPage && !scroll ? "transparent" : "white"};
     transition: background-color 0.3s ease, padding 0.3s ease;
@@ -82,18 +82,19 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 8px; /* Adjust padding to match footer */
 `;
 
 const Logo = styled.h1`
-    font-size: 1.75rem;
+    font-size: ${({ scroll }) => (scroll ? "1.5rem" : "1.75rem")};
     font-weight: bold;
     color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, font-size 0.3s ease;
     padding-left: 10px;
+    margin-right: 1rem; /* Add margin to maintain distance from other elements */
 
-    @media (min-width: 769px) {
-        font-size: 1.5rem;
+    @media (max-width: 768px) {
+        font-size: ${({ scroll }) => (scroll ? "1.2rem" : "1.5rem")}; /* Adjust for mobile */
     }
 `;
 
@@ -161,11 +162,12 @@ const DropdownMenu = styled.div`
     position: absolute;
     top: 100px; /* Adjust based on the header height */
     right: 10px;
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     padding: 1rem;
     z-index: 999;
+    width: 150px;
 
     ul {
         list-style: none;

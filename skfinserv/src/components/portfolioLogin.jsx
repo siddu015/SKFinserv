@@ -43,14 +43,14 @@ const StyledWrapper = styled.div`
     /* Responsive Styles */
     @media (max-width: 768px) {
         .comic-button {
-            padding: 8px 16px; /* Smaller padding for mobile */
+            padding: 10px 16px; /* Smaller padding for mobile */
             font-size: 1rem; /* Smaller font size for mobile */
         }
     }
 
     @media (max-width: 480px) {
         .comic-button {
-            padding: 6px 12px; /* Even smaller padding for smaller screens */
+            padding: 6px 8px; /* Even smaller padding for smaller screens */
             font-size: 0.9rem; /* Smaller font size for small screens */
         }
     }
