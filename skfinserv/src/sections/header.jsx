@@ -81,7 +81,7 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8px;
+    padding: 0 20px;
 `;
 
 const Logo = styled.h1`
@@ -89,7 +89,7 @@ const Logo = styled.h1`
     font-weight: bold;
     color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     transition: color 0.3s ease, font-size 0.3s ease;
-    padding-left: 10px;
+    //padding-left: 10px;
     margin-right: 3rem;
 
     @media (max-width: 1024px) {

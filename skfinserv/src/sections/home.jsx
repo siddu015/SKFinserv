@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SlideOne from "./slide1.jsx"
-import SlideTwo from "./slide2.jsx"
-import SlideThree from "./slide3.jsx"
+import SlideOne from "./slide1.jsx";
+import SlideTwo from "./slide2.jsx";
+import SlideThree from "./slide3.jsx";
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,19 +38,17 @@ const Home = () => {
     );
 };
 
-
-
-
-
-
 // Styled Components
 const HomeWrapper = styled.section`
     background: linear-gradient(to bottom right, rgba(10, 28, 64, 0.98) 12%, rgba(38, 116, 160) 63%, rgba(175, 202, 220, 0.99) 100%);
     color: rgba(175, 202, 220, 0.99);
     height: 800px;
     position: relative;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
+    @media (max-width: 768px) {
+        height: auto;
+    }
 `;
 
 const SlidesWrapper = styled.div`
@@ -67,7 +65,12 @@ const Slide = styled.div`
     align-items: center;
     height: 800px;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 20px;
+    }
 `;
 
 const DotsContainer = styled.div`

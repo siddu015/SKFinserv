@@ -11,7 +11,7 @@ import HomeButton from "../components/homeButton.jsx";
 const SlideOne = () => (
     <SlideContent>
         <LeftContent>
-            <h1>Your Life - Your Needs - Your Money</h1>
+            <h1>Your Life - Your Needs - Your Money It's About You</h1>
             <p>We at SK Wealth walk with you through the journey of life to help you fulfill your dreams.
                 Creating a financial plan helps you see the big picture and enables you to set your priorities right.
                 To us it's not just about planning your finances, it's about planning your lives.</p>
@@ -33,34 +33,35 @@ const SlideOne = () => (
 );
 
 // Styled Components
-
 const SlideContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    //padding: 0 40px;
-    gap: 40px; 
+    padding: 0 20px;
+    gap: 30px;
+
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0 20px;
-        margin-top: 80px;
+        margin-top: 60px;
+        gap: 20px;
     }
 `;
 
 const LeftContent = styled.div`
-    max-width: 45%; /* Reduced max-width to bring closer to center */
+    max-width: 45%;
     text-align: left;
     color: #fff;
 
     h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
     }
 
     p {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.8rem;
         color: rgba(175, 202, 220, 0.9);
     }
 
@@ -79,9 +80,9 @@ const LeftContent = styled.div`
 const RightContent = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center; /* Align images to the center */
-    max-width: 45%; /* Reduced max-width for better centering */
+    max-width: 50%;
 
     @media (max-width: 768px) {
         max-width: 100%;
@@ -91,9 +92,9 @@ const RightContent = styled.div`
 
 const ImageRow = styled.div`
     display: flex;
-    justify-content: space-around; /* Spreads out images more evenly */
+    justify-content: space-between;
     margin-bottom: 20px;
-    gap: 40px; /* Increase gap between images for better spacing */
+    gap: 30px;
 
     img {
         width: 100px;
@@ -103,10 +104,10 @@ const ImageRow = styled.div`
 
     @media (max-width: 768px) {
         justify-content: center;
-        gap: 20px; /* Slightly reduce gap for mobile view */
+        gap: 20px;
         img {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
         }
     }
 `;
