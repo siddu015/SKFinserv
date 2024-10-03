@@ -41,7 +41,7 @@ const Header = ({ isRootPage }) => {
                         &#9776; {/* Hamburger icon */}
                     </ToggleMenuButton>
                     <PortfolioLoginButton>
-                        <PortfolioLogin/>
+                        <PortfolioLogin />
                     </PortfolioLoginButton>
                 </NavContainer>
             </Container>
@@ -59,7 +59,6 @@ const Header = ({ isRootPage }) => {
     );
 };
 
-
 const HeaderWrapper = styled.header`
     position: fixed;
     top: 0;
@@ -72,7 +71,7 @@ const HeaderWrapper = styled.header`
     transition: background-color 0.3s ease, padding 0.3s ease;
     z-index: 1000;
     box-shadow: ${({ scroll, isRootPage }) =>
-            (isRootPage && !scroll ? "none" : "0 2px 10px rgba(0, 0, 0, 0.1)")};
+            isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
 `;
 
 const Container = styled.div`
@@ -82,19 +81,29 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8px; /* Adjust padding to match footer */
+    padding: 0 8px;
 `;
 
 const Logo = styled.h1`
-    font-size: ${({ scroll }) => (scroll ? "1.5rem" : "1.75rem")};
+    font-size: ${({ scroll }) => (scroll ? "1.5rem" : "1.7rem")};
     font-weight: bold;
     color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     transition: color 0.3s ease, font-size 0.3s ease;
     padding-left: 10px;
-    margin-right: 1rem; /* Add margin to maintain distance from other elements */
+    margin-right: 3rem;
+
+    @media (max-width: 1024px) {
+        font-size: ${({ scroll }) => (scroll ? "1.3rem" : "1.5rem")};
+        margin-right: 2rem;
+    }
 
     @media (max-width: 768px) {
-        font-size: ${({ scroll }) => (scroll ? "1.2rem" : "1.5rem")}; /* Adjust for mobile */
+        font-size: ${({ scroll }) => (scroll ? "1.2rem" : "1.5rem")};
+        margin-right: 1.5rem;
+    }
+
+    @media (max-width: 430px) {
+        font-size: 1.1rem;
     }
 `;
 
@@ -104,34 +113,18 @@ const NavContainer = styled.div`
     justify-content: flex-end;
 `;
 
-const ToggleMenuButton = styled.button`
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
-    cursor: pointer;
-    display: block;
-    position: relative;
-    right: 0;
-    order: 1;
-
-    @media (min-width: 769px) {
-        display: none;
-    }
-`;
-
 const Nav = styled.nav`
     ul {
         list-style: none;
         display: flex;
-        gap: 2.5rem;
+        gap: 2rem;
         align-items: center;
 
         li {
             a {
-                color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")}; /* Updated for link color */
+                color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
                 text-decoration: none;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 transition: color 0.3s ease;
 
                 &:hover {
@@ -146,6 +139,32 @@ const Nav = styled.nav`
             display: none;
         }
     }
+
+    @media (max-width: 430px) {
+        ul li a {
+            font-size: 0.9rem;
+        }
+    }
+`;
+
+const ToggleMenuButton = styled.button`
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
+    cursor: pointer;
+    display: block;
+    position: relative;
+    order: 1;
+    left: 20px;
+
+    @media (min-width: 769px) {
+        display: none;
+    }
+
+    @media (max-width: 430px) {
+        font-size: 1.6rem;
+    }
 `;
 
 const PortfolioLoginButton = styled.div`
@@ -154,16 +173,22 @@ const PortfolioLoginButton = styled.div`
     margin-left: 2rem;
 
     @media (max-width: 768px) {
-        margin-right: auto;
+        margin-left: 10px;
+        margin-right: -20px;
+    }
+
+    @media (max-width: 430px) {
+        margin-left: 30px;
+        margin-right: -30px;
     }
 `;
 
 const DropdownMenu = styled.div`
     position: absolute;
-    top: 100px; /* Adjust based on the header height */
+    top: 100px;
     right: 10px;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     padding: 1rem;
     z-index: 999;
@@ -177,7 +202,7 @@ const DropdownMenu = styled.div`
 
         li {
             a {
-                color: black; // Always black in dropdown
+                color: black;
                 text-decoration: none;
                 font-size: 1rem;
 
@@ -185,6 +210,13 @@ const DropdownMenu = styled.div`
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    @media (max-width: 430px) {
+        width: 130px;
+        ul li a {
+            font-size: 0.9rem;
         }
     }
 `;

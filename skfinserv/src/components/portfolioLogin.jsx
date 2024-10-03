@@ -12,8 +12,8 @@ const Button = () => {
 const StyledWrapper = styled.div`
     .comic-button {
         display: inline-block;
-        padding: 10px 20px; /* Default padding */
-        font-size: 1.1rem; /* Default font size */
+        padding: 10px 16px; /* Default padding */
+        font-size: 1rem; /* Default font size */
         font-weight: bolder;
         font-family: 'Castoro', serif; /* Add this line for font family */
         text-align: center;
@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
         background-color: #ff5252;
         border: 2px solid #000;
         border-radius: 10px;
-        box-shadow: 5px 5px 0px #000;
+        box-shadow: 5px 5px 0 #000;
         transition: all 0.3s ease;
         cursor: pointer;
 
@@ -48,10 +48,10 @@ const StyledWrapper = styled.div`
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 430px) {
         .comic-button {
             padding: 6px 8px; /* Even smaller padding for smaller screens */
-            font-size: 0.9rem; /* Smaller font size for small screens */
+            font-size: 0.75rem; /* Smaller font size for small screens */
         }
     }
 `;
