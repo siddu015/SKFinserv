@@ -1,27 +1,24 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const Logo = ({ scroll, isRootPage }) => {
-    return (
-        <StyledLogo scroll={scroll} isRootPage={isRootPage}>
-            SK Finserv
-        </StyledLogo>
-    );
+const LogoComponent = ({ scroll, isRootPage }) => {
+    return <Logo scroll={scroll} isRootPage={isRootPage}>SK Finserv</Logo>;
 };
 
-const StyledLogo = styled.h1`
-    font-size: ${({ scroll }) => (scroll ? "1.5rem" : "1.7rem")};
+const Logo = styled.h1`
+    font-size: 1.5rem;
     font-weight: bold;
     color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     transition: color 0.3s ease, font-size 0.3s ease;
     margin-right: 3rem;
 
     @media (max-width: 1024px) {
-        font-size: ${({ scroll }) => (scroll ? "1.3rem" : "1.5rem")};
+        font-size: 1.3rem;
         margin-right: 2rem;
     }
 
     @media (max-width: 768px) {
-        font-size: ${({ scroll }) => (scroll ? "1.2rem" : "1.5rem")};
+        font-size: 1.2rem;
         margin-right: 1.5rem;
     }
 
@@ -30,4 +27,4 @@ const StyledLogo = styled.h1`
     }
 `;
 
-export default Logo;
+export default LogoComponent;

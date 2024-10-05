@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = () => {
+const PortfolioLogin = () => {
     return (
-        <StyledWrapper>
-            <button className="comic-button">Portfolio Login</button>
-        </StyledWrapper>
+        <PortfolioLoginButton>
+            <StyledWrapper>
+                <button className="comic-button">Portfolio Login</button>
+            </StyledWrapper>
+        </PortfolioLoginButton>
     );
 };
 
@@ -56,4 +58,20 @@ const StyledWrapper = styled.div`
     }
 `;
 
-export default Button;
+const PortfolioLoginButton = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin-left: 1rem;
+
+    @media (max-width: 768px) {
+        margin-left: 20px;
+        margin-right: -30px;
+    }
+
+    @media (max-width: 430px) {
+        margin-left: 30px;
+        margin-right: -30px;
+    }
+`;
+
+export default PortfolioLogin;

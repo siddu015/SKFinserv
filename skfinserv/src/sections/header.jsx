@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import PortfolioLogin from "../components/Header/portfolioLogin.jsx";
-import Nav from "./Nav";
-import MobileDropdownMenu from "./MobileDropdownMenu";
-import Logo from "./Logo";
-import ToggleMenuButton from "./ToggleMenuButton";
+import PortfolioLoginButton from "../components/Header/PortfolioLoginButton.jsx";
+import Logo from "../components/Header/Logo.jsx";
+import Nav from "../components/Header/Nav.jsx";
+import MobileDropDownMenu from "../components/Header/MobileDropdownMenu.jsx";
 
 const Header = ({ isRootPage }) => {
     const [scroll, setScroll] = useState(false);
@@ -23,38 +22,45 @@ const Header = ({ isRootPage }) => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleNavLinkClick = () => {
+    const closeMenu = () => {
         setMenuOpen(false);
         setServicesOpen(false);
+    };
+
+    const toggleServicesDropdown = () => {
+        setServicesOpen(!servicesOpen);
+    };
+
+    const handleNavLinkClick = () => {
+        closeMenu(); // Use the closeMenu function to close the dropdown
     };
 
     return (
         <HeaderWrapper scroll={scroll} isRootPage={isRootPage}>
             <Container>
                 <Logo scroll={scroll} isRootPage={isRootPage} />
-                <Nav
-                    scroll={scroll}
-                    isRootPage={isRootPage}
-                    menuOpen={menuOpen}
-                    servicesOpen={servicesOpen}
-                    setServicesOpen={setServicesOpen}
-                    handleNavLinkClick={handleNavLinkClick}
-                />
-                <ToggleMenuButton scroll={scroll} onClick={toggleMenu} />
-                <PortfolioLoginButton>
-                    <PortfolioLogin />
-                </PortfolioLoginButton>
+                <NavContainer>
+                    <Nav scroll={scroll} isRootPage={isRootPage} menuOpen={menuOpen} handleNavLinkClick={handleNavLinkClick} />
+                    <ToggleMenuButton scroll={scroll} onClick={toggleMenu}>
+                        &#9776; {/* Hamburger icon */}
+                    </ToggleMenuButton>
+                    <PortfolioLoginButton />
+                </NavContainer>
             </Container>
-            {menuOpen && (
-                <MobileDropdownMenu
-                    servicesOpen={servicesOpen}
-                    setServicesOpen={setServicesOpen}
-                    handleNavLinkClick={handleNavLinkClick}
-                />
-            )}
+
+            {/* Mobile Dropdown */}
+            <MobileDropDownMenu
+                menuOpen={menuOpen}
+                servicesOpen={servicesOpen}
+                toggleServicesDropdown={toggleServicesDropdown}
+                closeMenu={closeMenu} // Pass the closeMenu function
+                handleNavLinkClick={handleNavLinkClick}
+            />
+
         </HeaderWrapper>
     );
-};
+};;
+
 
 // Styled Components
 const HeaderWrapper = styled.header`
@@ -65,11 +71,11 @@ const HeaderWrapper = styled.header`
     font-family: 'Castoro', serif;
     padding: ${({ scroll }) => (scroll ? "15px 20px" : "15px 20px")};
     background-color: ${({ scroll, isRootPage }) =>
-            isRootPage && !scroll ? "transparent" : "white"};
+    isRootPage && !scroll ? "transparent" : "white"};
     transition: background-color 0.3s ease, padding 0.3s ease;
     z-index: 1000;
     box-shadow: ${({ scroll, isRootPage }) =>
-            isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
+    isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
 `;
 
 const Container = styled.div`
@@ -82,20 +88,32 @@ const Container = styled.div`
     padding: 0 20px;
 `;
 
-const PortfolioLoginButton = styled.div`
+const NavContainer = styled.div`
     display: flex;
-    align-items: flex-end;
-    margin-left: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+`;
 
-    @media (max-width: 768px) {
-        margin-left: 10px;
-        margin-right: -20px;
+const ToggleMenuButton = styled.button`
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
+    cursor: pointer;
+    display: block;
+    position: relative;
+    order: 1;
+    left: 30px;
+    right: 30px;
+
+    @media (min-width: 769px) {
+        display: none;
     }
 
     @media (max-width: 430px) {
-        margin-left: 30px;
-        margin-right: -30px;
+        font-size: 1.6rem;
     }
 `;
+
 
 export default Header;
