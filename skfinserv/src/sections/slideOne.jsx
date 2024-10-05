@@ -41,7 +41,7 @@ const SlideContent = styled.div`
     width: 100%;
     height: 100%;
     gap: 30px;
-    
+
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 100px 20px;
@@ -54,7 +54,7 @@ const LeftContent = styled.div`
     color: #fff;
     text-align: left;
     margin-right: 2rem;
-    
+
     h1 {
         font-size: 2.8rem;
         margin-bottom: 1.5rem;
@@ -69,7 +69,7 @@ const LeftContent = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100%;
-        //text-align: center;
+        
         margin-right: 0;
         h1 {
             font-size: 2rem;
@@ -84,6 +84,7 @@ const RightContent = styled.div`
     margin-right: 3rem;
     max-width: 40%;
     
+
     @media (max-width: 768px) {
         max-width: 100%;
         margin-top: 20px;
@@ -96,10 +97,10 @@ const ImageRow = styled.div`
     justify-content: space-between;
     margin-bottom: 20px;
     gap: 30px;
-    
+
     img {
-        width: 100px;
-        height: 100px;
+        max-width: 100px;
+        max-height: 100px;
         object-fit: contain;
     }
 
@@ -107,8 +108,8 @@ const ImageRow = styled.div`
         justify-content: center;
         gap: 20px;
         img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
         }
     }
 `;

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SlideOne from "./slide1.jsx";
-import SlideTwo from "./slide2.jsx";
+import SlideOne from "./slideOne.jsx";
+import SlideTwo from "./slideTwo.jsx";
+import SlideThree from "./slideThree.jsx";
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
         { id: 1, component: <SlideOne /> },
         { id: 2, component: <SlideTwo /> },
+        { id: 3, component: <SlideThree /> },
     ];
 
     const handleDotClick = (index) => {
@@ -52,11 +54,10 @@ const HomeWrapper = styled.section`
 const SlidesWrapper = styled.div`
     display: flex;
     height: 100%;
-    transform: translateX(-${(props) => props.currentSlide * 100}vw);
-    transition: transform 0.5s ease;
-    padding: 0 20px;
-    box-sizing: border-box; // Include padding in width calculation
-    //overflow: hidden;
+    transform: translateX(-${(props) => props.currentSlide * 100}%); // Shift horizontally between slides
+    transition: transform 0.8s ease-in-out;
+    width: 100%; // Enough space for both slides
+    
 `;
 
 const Slide = styled.div`
@@ -64,10 +65,12 @@ const Slide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 100%;
     text-align: center;
-    padding: 0 20px;
-
+    padding: 0 40px;
+    width: 100%;
+    box-sizing: border-box;
+    
     @media (max-width: 768px) {
         height: auto;
         padding: 20px;

@@ -1,19 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import HomeButton from "../components/homeButton.jsx";
-import FinancialPlanning from "../assets/images/finanicalPlanning.png"
+import FinancialPlanning from "../assets/images/finanicalPlanning.png";
 
-const SlideTwo = () => (
+import HomeButton from "../components/homeButton.jsx";
+
+const SlideOne = () => (
     <SlideContent>
         <LeftContent>
-            <h1>Your Life - Your Needs - Your Money It's About You</h1>
-            <p>We at SK Wealth walk with you through the journey of life to help you fulfill your dreams.
-                Creating a financial plan helps you see the big picture and enables you to set your priorities right.
-                To us it's not just about planning your finances, it's about planning your lives.</p>
-            <HomeButton />
+            <h1>Goals are Dreams with Deadlines</h1>
+            <p>The journey to your dreams would be well achieved if you plan for them beforehand.
+                Know what you want, when you want and the rest will fall in place.
+                <br/>
+                <b>
+                    Your Dreams. Your Goals. Your Journey.
+                    You Drive. We make sure you meet the deadline.
+                </b>
+            </p>
+            <p></p>
+            <HomeButton/>
         </LeftContent>
         <RightContent>
-                <img src={FinancialPlanning} alt="Financial Planning Icon" />
+            <img src={FinancialPlanning} alt="Graduation Cap Icon" />
         </RightContent>
     </SlideContent>
 );
@@ -27,7 +34,7 @@ const SlideContent = styled.div`
     width: 100%;
     height: 100%;
     gap: 30px;
-    
+
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 100px 20px;
@@ -36,11 +43,11 @@ const SlideContent = styled.div`
 `;
 
 const LeftContent = styled.div`
-    max-width: 50%;
+    max-width: 55%;
     color: #fff;
     text-align: left;
     //margin-right: 2rem;
-    padding: 0 20px;
+
     h1 {
         font-size: 2.8rem;
         margin-bottom: 1.5rem;
@@ -55,6 +62,7 @@ const LeftContent = styled.div`
 
     @media (max-width: 768px) {
         max-width: 100%;
+
         margin-right: 0;
         h1 {
             font-size: 2rem;
@@ -66,31 +74,18 @@ const LeftContent = styled.div`
 `;
 
 const RightContent = styled.div`
-    //margin-right: 3rem;
-    //max-width: 40%;
-    margin-left: -100px;
-
     img {
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         object-fit: contain;
     }
-    
+
     @media (max-width: 768px) {
-        max-width: 100%;
-        margin-top: 20px;
-        margin-right: 0;
-        justify-content: center;
-        gap: 20px;
         img {
-            width: 60px;
-            height: 60px;
+            width: 250px;
+            height: 250px;
         }
     }
 `;
 
-
-
-
-
-export default SlideTwo;
+export default SlideOne;
