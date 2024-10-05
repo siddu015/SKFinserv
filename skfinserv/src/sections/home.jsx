@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import SlideOne from "./slide1.jsx";
 import SlideTwo from "./slide2.jsx";
-import SlideThree from "./slide3.jsx";
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
         { id: 1, component: <SlideOne /> },
         { id: 2, component: <SlideTwo /> },
-        { id: 3, component: <SlideThree /> },
     ];
 
     const handleDotClick = (index) => {
@@ -56,6 +54,9 @@ const SlidesWrapper = styled.div`
     height: 100%;
     transform: translateX(-${(props) => props.currentSlide * 100}vw);
     transition: transform 0.5s ease;
+    padding: 0 20px;
+    box-sizing: border-box; // Include padding in width calculation
+    //overflow: hidden;
 `;
 
 const Slide = styled.div`
@@ -65,7 +66,7 @@ const Slide = styled.div`
     align-items: center;
     height: 800px;
     text-align: center;
-    padding: 20px;
+    padding: 0 20px;
 
     @media (max-width: 768px) {
         height: auto;

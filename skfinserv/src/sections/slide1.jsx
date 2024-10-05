@@ -37,23 +37,24 @@ const SlideContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1250px;
+    width: 100%;
     height: 100%;
-    padding: 0 20px;
     gap: 30px;
-
+    
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 0 20px;
-        margin-top: 60px;
+        padding: 100px 20px;
         gap: 20px;
     }
 `;
 
 const LeftContent = styled.div`
-    max-width: 45%;
-    text-align: left;
+    max-width: 50%;
     color: #fff;
-
+    text-align: left;
+    margin-right: 2rem;
+    
     h1 {
         font-size: 2.8rem;
         margin-bottom: 1.5rem;
@@ -63,11 +64,13 @@ const LeftContent = styled.div`
         font-size: 1.3rem;
         margin-bottom: 1.8rem;
         color: rgba(175, 202, 220, 0.9);
+        text-align: justify;
     }
 
     @media (max-width: 768px) {
         max-width: 100%;
-        text-align: center;
+        //text-align: center;
+        margin-right: 0;
         h1 {
             font-size: 2rem;
         }
@@ -78,15 +81,13 @@ const LeftContent = styled.div`
 `;
 
 const RightContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 50%;
-
+    margin-right: 3rem;
+    max-width: 40%;
+    
     @media (max-width: 768px) {
         max-width: 100%;
         margin-top: 20px;
+        margin-right: 0;
     }
 `;
 
@@ -95,7 +96,7 @@ const ImageRow = styled.div`
     justify-content: space-between;
     margin-bottom: 20px;
     gap: 30px;
-
+    
     img {
         width: 100px;
         height: 100px;

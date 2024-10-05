@@ -24,6 +24,7 @@ const Logo = styled.h1`
 
     @media (max-width: 430px) {
         font-size: 1.1rem;
+        margin-right: 0.5rem;
     }
 `;
 

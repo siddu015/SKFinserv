@@ -46,7 +46,7 @@ const StyledWrapper = styled.div`
     @media (max-width: 768px) {
         .comic-button {
             padding: 10px 16px; /* Smaller padding for mobile */
-            font-size: 1rem; /* Smaller font size for mobile */
+            font-size: 0.9rem; /* Smaller font size for mobile */
         }
     }
 
@@ -69,7 +69,7 @@ const PortfolioLoginButton = styled.div`
     }
 
     @media (max-width: 430px) {
-        margin-left: 30px;
+        margin-left: 10px;
         margin-right: -30px;
     }
 `;
