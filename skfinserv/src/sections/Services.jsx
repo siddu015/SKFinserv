@@ -16,7 +16,7 @@ const Services = () => {
             title: 'Budgeting',
             description: 'It’s not your salary that makes you wealthy; It’s your spending habits.\n' +
                 'Budget is not a plan to save; It’s a plan to spend!!\n',
-            link: '/skfinserv/budgeting',
+            link: '/service/budgeting',
         },
         {
             image: Emergency,

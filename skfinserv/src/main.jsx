@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import AboutUs from './pages/aboutUs.jsx';
-
+import Budgeting from './pages/Budgetting.jsx';
 const router = createBrowserRouter([
     {
         path: "/",
@@ -14,6 +14,9 @@ const router = createBrowserRouter([
     {
         path: "/aboutUs", // Change to a more appropriate route for About Us
         element: <AboutUs />
+    },{
+        path: "/service/budgeting", // Change to a more appropriate route for About Us
+        element: <Budgeting />
     }
 ]);
 
