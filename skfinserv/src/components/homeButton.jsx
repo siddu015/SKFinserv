@@ -61,8 +61,8 @@ const StyledWrapper = styled.div`
 
     @media (max-width: 480px) {
         .boton-elegante {
-            padding: 10px 20px;
-            font-size: 0.9rem;
+            padding: 6px 12px;
+            font-size: 0.6rem;
             border-radius: 20px;
         }
     }

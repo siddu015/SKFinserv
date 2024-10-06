@@ -46,8 +46,13 @@ const HomeWrapper = styled.section`
     position: relative;
     width: 100%;
     overflow: hidden;
+    
     @media (max-width: 768px) {
-        height: auto;
+        height: 750px;
+    }
+
+    @media (max-width: 430px) {
+        height: 500px;
     }
 `;
 
