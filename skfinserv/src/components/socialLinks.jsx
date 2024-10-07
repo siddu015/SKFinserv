@@ -142,8 +142,22 @@ const StyledWrapper = styled.div`
     .social-login-icons {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+
+
+        @media (max-width: 768px) {
+            //justify-content: center;
+            -webkit-box-reflect: below -10px linear-gradient(transparent, #00000055);
+
+        }
+        @media (max-width: 480px) {
+            gap: 5px;
+            justify-content: center;
+            -webkit-box-reflect: below -10px linear-gradient(transparent, #00000055);
+
+        }
+    
     }
 
     .social-login-icons svg {

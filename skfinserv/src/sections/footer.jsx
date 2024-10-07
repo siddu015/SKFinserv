@@ -17,7 +17,8 @@ const Footer = () => {
                             <h3>SK Finserv</h3>
                             <p>
                                 Welcome to SK Finserv, your trusted financial companion in India. We understand that your financial journey is more than just numbers; it's a story of dreams, aspirations, and the legacy you want to leave behind. At SK Finserv, we believe everyone deserves a secure and prosperous future.
-                                <br /><br />
+                            </p>
+                            <p>
                                 SK Finserv has been in the field of personal finance and wealth management for over a decade. We make sure every plan is tailored to each client’s current financial situation, future goals, and risk appetite.
                             </p>
                             <SocialLinks>
@@ -88,6 +89,11 @@ const FooterWrapper = styled.footer`
 const FooterTop = styled.div`
     padding: 50px 20px;
     margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 20px 20px;
+        margin-bottom: 0;
+    }
 `;
 
 const Separator = styled.hr`
@@ -116,6 +122,18 @@ const FooterSection = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
     }
+    
+    @media (max-width: 430px) {
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+    }
 `;
 
 const About = styled.div`
@@ -124,6 +142,9 @@ const About = styled.div`
 
     @media (max-width: 768px) {
         margin-right: 0;
+        p{
+            margin: 10px 0;
+        }
     }
 `;
 
@@ -143,13 +164,32 @@ const GetInTouch = styled.div`
     }
 
     @media (max-width: 768px) {
-        margin-top: 80px;
+        margin-top: 60px;
+        div {
+            margin-bottom: 10px;
+            img {
+                width: 22px;
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        margin-top: 60px;
+        div {
+            img {
+                width: 16px;
+            }
+        }
     }
 `;
 
 const Disclaimer = styled.div`
     padding: 50px 20px;
     width: 100%;
+
+    @media (max-width: 768px) {
+        padding: 20px 20px;
+    }
 `;
 
 const DContainer = styled.div`
@@ -179,21 +219,28 @@ const DisclaimerSection = styled.div`
     p {
         line-height: 1.6;
     }
+    
+    @media (max-width: 430px) {
+        p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+    }
 
 `;
 
 const DisclaimerText = styled.div`
     flex: 1;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-
     p {
         margin: 10px 0;
         &.bold-text {
             font-weight: bold;
         }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 `;
 
@@ -210,12 +257,10 @@ const ImagesWrapper = styled.div`
         width: 100px;
         height: auto;
     }
-
     .fit-image {
         width: auto;
         max-height: 100px;
     }
-
     p {
         text-align: center;
         font-weight: bold;
@@ -226,25 +271,34 @@ const ImagesWrapper = styled.div`
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin: 10px 0;
+        gap: 10px;
+
+        img {
+            margin: 0 10px;
+            width: 80px;
+            height: auto;
+        }
+
+        .fit-image {
+            width: auto;
+            max-height: 50px;
+        }
     }
-`;
+    
+    @media (max-width: 430px) {
+        margin: 10px 0;
 
-const FooterBottom = styled.div`
-    background-color: #0F2144;
-    width: 100%;
-    padding: 20px 0;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-    text-align: center;
+        img {
+            width: 60px;
+            height: auto;
+        }
 
-    @media (max-width: 768px) {
-        padding: 10px 20px;
-        flex-direction: column;
-        align-items: center;
+        .fit-image {
+            width: auto;
+            max-height: 40px;
+        }
+        
     }
 `;
 
@@ -264,6 +318,30 @@ const Container = styled.div`
     }
 `;
 
+const FooterBottom = styled.div`
+    background-color: #0F2144;
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 430px) {
+        padding: 0;
+            font-size: 0.8rem;
+    }
+    
+`;
+
 const Left = styled.div`
     flex: 1;
     text-align: left;
@@ -274,7 +352,7 @@ const Left = styled.div`
 
     @media (max-width: 768px) {
         text-align: center;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
     }
 `;
 
