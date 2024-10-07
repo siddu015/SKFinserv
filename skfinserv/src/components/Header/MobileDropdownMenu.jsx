@@ -8,10 +8,8 @@ const MobileDropdownMenu = ({ menuOpen, servicesOpen, toggleServicesDropdown, cl
     // Effect to close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            // Check if the click is outside the dropdown
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target) && menuOpen) {
-                // Close the dropdown
-                closeMenu(); // Use closeMenu instead of toggleServicesDropdown
+            if (menuOpen && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                closeMenu();
             }
         };
 
@@ -28,22 +26,19 @@ const MobileDropdownMenu = ({ menuOpen, servicesOpen, toggleServicesDropdown, cl
 
     return (
         <>
-            {/* Mobile Dropdown */}
             {menuOpen && (
                 <DropdownMenuWrapper ref={dropdownRef}>
                     <ul>
                         <li><a href="/" onClick={handleNavLinkClick}>Home</a></li>
                         <li className="dropdown-item">
-                            <a href="#" onClick={toggleServicesDropdown}
-                               style={{ display: 'flex', alignItems: 'center' }}
-                            >
+                            <a href="#" onClick={toggleServicesDropdown} style={{ display: 'flex', alignItems: 'center', margin: '-5px 0' }}>
                                 Services
-                                <span style={{ marginLeft: '5px', display: 'flex', alignItems: 'center' }}>
+                                <span style={{ marginLeft: '5px', marginTop: "6px" }}>
                                     {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
                                 </span>
                             </a>
                             {servicesOpen && (
-                                <ul className="dropdown">
+                                <ul className="dropdown" style={{ marginTop: '10px' }}>
                                     <li><a href="/services/budgeting">Budgeting</a></li>
                                     <li><a href="/services/emergency-planning">Emergency Planning</a></li>
                                     <li><a href="/services/retirement-solutions">Retirement Solutions</a></li>
@@ -61,71 +56,65 @@ const MobileDropdownMenu = ({ menuOpen, servicesOpen, toggleServicesDropdown, cl
         </>
     );
 };
-
-// Styled components for Dropdown
+// Styled components
 const DropdownMenuWrapper = styled.div`
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  padding: 1.5rem;
-  z-index: 999;
-  width: 300px;
-
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    li {
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 1rem;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .dropdown {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    width: 260px;
-
-    li {
-      margin: -5px 0;
-
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 0.9rem;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 430px) {
+    position: absolute;
     width: 100%;
     right: 1px;
-      border-radius: 0;
-      top: auto;
-      margin-top: 15px;
-    ul li a {
-      font-size: 0.9rem;
+    top: auto;
+    margin-top: 15px;
+    border-radius: 0;
+    padding: 1.5rem;
+    z-index: 999;
+    backdrop-filter: blur(20px); /* Blurry background */
+    background-color: rgba(250, 249, 249, 0.5); /* Slightly transparent white */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    color: black;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: 1rem;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #ffffff; /* Hover color for links */
+                }
+            }
+        }
     }
-  }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 20px;
+
+        li a {
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #ffffff; /* Hover color for dropdown links */
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        width: 100%;
+        right: 1px;
+        top: auto;
+        margin-top: 15px;
+        border-radius: 0;
+    }
 `;
 
 export default MobileDropdownMenu;

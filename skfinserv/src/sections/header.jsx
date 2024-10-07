@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import PortfolioLoginButton from "../components/Header/PortfolioLoginButton.jsx";
 import Logo from "../components/Header/Logo.jsx";
@@ -18,22 +18,27 @@ const Header = ({ isRootPage }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+    const toggleMenu = useCallback(() => {
+        setMenuOpen((prev) => {
+            if (prev) {
+                setServicesOpen(false); // Reset services dropdown when closing
+            }
+            return !prev; // Toggle menuOpen state
+        });
+    }, []);
 
-    const closeMenu = () => {
+    const closeMenu = useCallback(() => {
         setMenuOpen(false);
         setServicesOpen(false);
-    };
+    }, []);
 
-    const toggleServicesDropdown = () => {
-        setServicesOpen(!servicesOpen);
-    };
+    const toggleServicesDropdown = useCallback(() => {
+        setServicesOpen((prev) => !prev);
+    }, []);
 
-    const handleNavLinkClick = () => {
-        closeMenu(); // Use the closeMenu function to close the dropdown
-    };
+    const handleNavLinkClick = useCallback(() => {
+        closeMenu();
+    }, [closeMenu]);
 
     return (
         <HeaderWrapper scroll={scroll} isRootPage={isRootPage}>
@@ -42,7 +47,7 @@ const Header = ({ isRootPage }) => {
                 <NavContainer>
                     <Nav scroll={scroll} isRootPage={isRootPage} menuOpen={menuOpen} handleNavLinkClick={handleNavLinkClick} />
                     <ToggleMenuButton scroll={scroll} onClick={toggleMenu}>
-                        &#9776; {/* Hamburger icon */}
+                        {menuOpen ? <span style={{ fontSize: '1.5rem', fontWeight:'300' }}>✖</span> : '☰'} {/* Adjust size of "X" */}
                     </ToggleMenuButton>
                     <PortfolioLoginButton />
                 </NavContainer>
@@ -53,14 +58,12 @@ const Header = ({ isRootPage }) => {
                 menuOpen={menuOpen}
                 servicesOpen={servicesOpen}
                 toggleServicesDropdown={toggleServicesDropdown}
-                closeMenu={closeMenu} // Pass the closeMenu function
+                closeMenu={closeMenu}
                 handleNavLinkClick={handleNavLinkClick}
             />
-
         </HeaderWrapper>
     );
-};;
-
+};
 
 // Styled Components
 const HeaderWrapper = styled.header`
@@ -71,11 +74,11 @@ const HeaderWrapper = styled.header`
     font-family: 'Castoro', serif;
     padding: ${({ scroll }) => (scroll ? "15px 20px" : "15px 20px")};
     background-color: ${({ scroll, isRootPage }) =>
-    isRootPage && !scroll ? "transparent" : "white"};
+            isRootPage && !scroll ? "transparent" : "white"};
     transition: background-color 0.3s ease, padding 0.3s ease;
     z-index: 1000;
     box-shadow: ${({ scroll, isRootPage }) =>
-    isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
+            isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
 `;
 
 const Container = styled.div`
@@ -114,6 +117,5 @@ const ToggleMenuButton = styled.button`
         font-size: 1.6rem;
     }
 `;
-
 
 export default Header;

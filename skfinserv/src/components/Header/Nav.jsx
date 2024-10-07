@@ -93,8 +93,11 @@ const NavWrapper = styled.nav`
                 align-items: flex-start;
                 top: 150%;
                 left: 0;
-                background-color: white;
-                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(20px); /* Blurry background */
+                background-color: rgba(250, 249, 249, 0.5); /* Slightly transparent white */
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+                //background-color: white;
+                //box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
                 padding: 20px;
                 border-radius: 10px;
                 z-index: 10;
@@ -111,6 +114,7 @@ const NavWrapper = styled.nav`
 
                         &:hover {
                             text-decoration: underline;
+                            color: #ffffff;
                         }
                     }
                 }
