@@ -11,7 +11,7 @@ const ServiceButton = () => {
 
 const StyledWrapper = styled.div`
   button {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -23,6 +23,13 @@ const StyledWrapper = styled.div`
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
+
+  @media (max-width: 768px) {
+      font-size: 0.8rem;
+  }
+  @media (max-width: 430px) {
+      font-size: 0.7rem;
+  }
 }
 
 button:focus,
@@ -32,8 +39,8 @@ button:hover {
 
 button:focus:after,
 button:hover:after {
-  width: 90%;
-  left: 5%;
+  width: 80%;
+  left: 10%;
 }
 
 button:after {

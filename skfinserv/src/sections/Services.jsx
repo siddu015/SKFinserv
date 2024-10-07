@@ -9,7 +9,6 @@ import AssetManagement from '../assets/Images/AssetManagement.png';
 import RiskManagement from '../assets/Images/RiskManagement.png';
 
 const Services = () => {
-    // Data for cards
     const cardData = [
         {
             image: piggyLogo,
@@ -68,44 +67,64 @@ const Services = () => {
     );
 };
 
+
 // Styled components
 const StyledSection = styled.section`
     width: 100%;
-    padding: 40px 20px; // Top and bottom padding with a bit of left-right space for alignment
-    background-color: #f5f5f5; // Light background color to differentiate section
-    margin: 40px 0; // Space between sections
+    padding: 40px 20px; 
+    background-color: #f5f5f5; 
+    margin: 40px 0; 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin: 20px 0;
+    }
+    @media (max-width: 430px) {
+        margin: 10px 0;
+        padding: 30px 20px;
+    }
 `;
 
 const StyledHeading = styled.h2`
     text-align: center;
     font-size: 2.5rem;
     color: rgba(0, 0, 0);
-    margin-bottom: 40px; // Increased margin to provide more spacing between heading and content
+    margin-bottom: 40px; 
     font-weight: bold;
-    letter-spacing: 0.05em; // Slight letter spacing for improved readability
+    letter-spacing: 0.05em;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+    
+    @media (max-width: 430px) {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
 `;
 
 const StyledGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Cards will automatically fit based on screen size
-    gap: 30px; // Larger gap for breathing space between cards
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
     width: 100%;
     max-width: 1200px;
-    padding: 0 20px; // Padding on left and right for better spacing on wider screens
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr; // Stack cards on small screens
+    padding: 0 20px; 
+    
+    @media (max-width: 630px) {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr); // Two columns on medium screens
+    @media (min-width: 630px) and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     @media (min-width: 1025px) {
-        grid-template-columns: repeat(3, 1fr); // Three columns on large screens
+        grid-template-columns: repeat(3, 1fr); 
     }
 `;
 

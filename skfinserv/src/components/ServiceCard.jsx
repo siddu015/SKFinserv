@@ -52,7 +52,7 @@ const StyledWrapper = styled.div`
 
     .card__image {
         width: 120px;
-        height: auto;
+        height: 120px;
         margin-bottom: 10px;
         transition: transform 0.4s ease-in-out;
     }
@@ -122,24 +122,63 @@ const StyledWrapper = styled.div`
         margin-bottom: 20px;
     }
 
+    @media (max-width: 630px) {
+        .card {
+            margin: 0.5rem auto;
+        }
+    }
     @media (max-width: 768px) {
         .card {
-            max-width: 300px;
-            height: auto;
+            max-width: 280px;
+            height: 180px;
+        }
+        
+        .card__image {
+            width: 80px;
+            height: 80px; /* Fixed height for consistency */
+        }
+
+        .initial__title,
+        .card__title {
+            font-size: 1.2rem; /* Reduced size for smaller screens */
+        }
+        
+        .card__description {
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .card__button-wrapper {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .card {
+            max-width: 240px; /* Responsive width */
+            max-height: 160px;
         }
 
         .card__image {
-            width: 100px;
+            width: 60px;
+            height: 60px; /* Fixed height for consistency */
         }
 
+        .initial__title,
         .card__title {
-            font-size: 22px;
+            font-size: 1rem; /* Reduced size for smaller screens */
         }
 
         .card__description {
-            font-size: 14px;
+            font-size: 0.8rem; /* Reduced size for smaller screens */
+            margin-top: 4px;
         }
-    }
+
+        .card__button-wrapper {
+            margin-top: 5px;
+            margin-left: -12px;
+            margin-bottom: 10px; /* Adjust spacing */
+        }
 `;
 
 export default ServiceCard;
