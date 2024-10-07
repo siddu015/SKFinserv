@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// Slide 3 - Third Slide Layout
 const SlideThree = () => (
     <SlideWrapper>
         <ContentWrapper>
@@ -23,18 +22,18 @@ const SlideThree = () => (
     </SlideWrapper>
 );
 
+// Styled Components
 const SlideWrapper = styled.div`
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    
+
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 50px 20px;
     }
-    
+
     @media (max-width: 430px) {
         padding: 20px;
     }
@@ -147,6 +146,7 @@ const CircleLabel = styled.div`
 
     @media (max-width: 768px) {
         font-size: 1rem;
+
         &.action {
             bottom: -30px;
         }
@@ -154,6 +154,7 @@ const CircleLabel = styled.div`
 
     @media (max-width: 430px) {
         font-size: 0.6rem;
+
         &.goal {
             top: -15px;
             left: 10%;

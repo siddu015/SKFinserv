@@ -1,26 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import FinancialPlanning from "../assets/images/finanicalPlanning.png";
+import FinancialPlanning from "../../assets/Images/finanicalPlanning.png";
+import HomeButton from "../homeButton.jsx";
 
-import HomeButton from "../components/homeButton.jsx";
-
-const SlideOne = () => (
+const SlideTwo = () => (
     <SlideContent>
         <LeftContent>
             <h1>Goals are Dreams with Deadlines</h1>
-            <p>The journey to your dreams would be well achieved if you plan for them beforehand.
-                Know what you want, when you want and the rest will fall in place.
-                <br/>
-                <b>
-                    Your Dreams. Your Goals. Your Journey.
-                    You Drive. We make sure you meet the deadline.
-                </b>
+            <p>
+                The journey to your dreams would be well achieved if you plan for them beforehand.
+                Know what you want, when you want, and the rest will fall in place.
+                <br />
+                <b>Your Dreams. Your Goals. Your Journey. You Drive. We make sure you meet the deadline.</b>
             </p>
-            <p></p>
-            <HomeButton/>
+            <HomeButton />
         </LeftContent>
         <RightContent>
-            <img src={FinancialPlanning} alt="Graduation Cap Icon" />
+            <img src={FinancialPlanning} alt="Financial Planning" />
         </RightContent>
     </SlideContent>
 );
@@ -37,12 +33,6 @@ const SlideContent = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 100px 20px;
-        gap: 0;
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
         padding: 50px 20px;
         gap: 0;
     }
@@ -52,7 +42,6 @@ const LeftContent = styled.div`
     max-width: 55%;
     color: #fff;
     text-align: left;
-    //margin-right: 2rem;
 
     h1 {
         font-size: 2.8rem;
@@ -70,11 +59,11 @@ const LeftContent = styled.div`
         max-width: 100%;
         margin-top: 40px;
 
-        margin-right: 0;
         h1 {
             font-size: 2rem;
             margin-bottom: 1.2rem;
         }
+
         p {
             font-size: 1rem;
             margin-bottom: 1.5rem;
@@ -82,14 +71,13 @@ const LeftContent = styled.div`
     }
 
     @media (max-width: 430px) {
-        max-width: 100%;
-        margin-right: 0;
-        margin-top: 10px;
+        margin-top: 20px;
 
         h1 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: 0.8rem;
         }
+
         p {
             font-size: 0.6rem;
             margin-bottom: 0.8rem;
@@ -105,15 +93,13 @@ const RightContent = styled.div`
     }
 
     @media (max-width: 768px) {
-        max-width: 100%;
-        margin-bottom: 40px;
         img {
             width: 250px;
             height: 250px;
         }
     }
+
     @media (max-width: 430px) {
-        margin-bottom: 0;
         img {
             width: 150px;
             height: 150px;
@@ -121,4 +107,4 @@ const RightContent = styled.div`
     }
 `;
 
-export default SlideOne;
+export default SlideTwo;

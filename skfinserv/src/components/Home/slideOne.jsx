@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Graduation from "../assets/icons/GraduationCapIcon.svg";
-import Marriage from "../assets/icons/marriage.png";
-import PiggyBankRupee from "../assets/icons/PiggyBankRupee.png";
-import OldCouple from "../assets/icons/OldCouple.png";
-import House from "../assets/icons/House.png";
-import Travelling from "../assets/icons/Travelling.png";
-import HomeButton from "../components/homeButton.jsx";
+import Graduation from "../../assets/icons/GraduationCapIcon.svg";
+import Marriage from "../../assets/icons/marriage.png";
+import PiggyBankRupee from "../../assets/icons/PiggyBankRupee.png";
+import OldCouple from "../../assets/icons/OldCouple.png";
+import House from "../../assets/icons/House.png";
+import Travelling from "../../assets/icons/travelling.png";
+import HomeButton from "../homeButton.jsx";
 
 const SlideOne = () => (
     <SlideContent>
@@ -44,12 +44,6 @@ const SlideContent = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 100px 20px;
-        gap: 0;
-    }
-    
-    @media (max-width: 768px) {
-        flex-direction: column;
         padding: 50px 20px;
         gap: 0;
     }
@@ -76,28 +70,29 @@ const LeftContent = styled.div`
     @media (max-width: 768px) {
         max-width: 100%;
         margin-top: 40px;
-        
         margin-right: 0;
+
         h1 {
             font-size: 2rem;
             margin-bottom: 1.2rem;
         }
+
         p {
             font-size: 1rem;
             margin-bottom: 1.5rem;
         }
     }
-    
+
     @media (max-width: 430px) {
         max-width: 100%;
+        margin-top: 20px;
         margin-right: 0;
-        margin-top: 10px;
-        
+
         h1 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: 0.8rem;
-            
         }
+
         p {
             font-size: 0.6rem;
             margin-bottom: 0.8rem;
@@ -108,13 +103,13 @@ const LeftContent = styled.div`
 const RightContent = styled.div`
     margin-right: 3rem;
     max-width: 40%;
-    
+
     @media (max-width: 768px) {
         max-width: 100%;
-        //margin-top: -20px;
         margin-bottom: 40px;
         margin-right: 0;
     }
+
     @media (max-width: 430px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -136,6 +131,7 @@ const ImageRow = styled.div`
     @media (max-width: 768px) {
         justify-content: center;
         gap: 30px;
+
         img {
             width: 90px;
             height: 90px;
@@ -145,6 +141,7 @@ const ImageRow = styled.div`
     @media (max-width: 430px) {
         justify-content: center;
         gap: 20px;
+
         img {
             width: 50px;
             height: 50px;

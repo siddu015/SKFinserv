@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SlideOne from "./slideOne.jsx";
-import SlideTwo from "./slideTwo.jsx";
-import SlideThree from "./slideThree.jsx";
+import SlideOne from "../components/Home/slideOne.jsx";
+import SlideTwo from "../components/Home/slideTwo.jsx";
+import SlideThree from "../components/Home/slideThree.jsx";
 
 const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
