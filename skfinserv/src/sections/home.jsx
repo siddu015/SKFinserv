@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import SlideOne from "../components/Home/slideOne.jsx";
 import SlideTwo from "../components/Home/slideTwo.jsx";
@@ -15,6 +15,14 @@ const Home = () => {
     const handleDotClick = (index) => {
         setCurrentSlide(index);
     };
+
+    useEffect(() => {
+        const slideInterval = setInterval(() => {
+            setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+        }, 3000); // Change slides every 3 seconds
+
+        return () => clearInterval(slideInterval); // Cleanup interval on component unmount
+    }, [slides.length]);
 
     return (
         <HomeWrapper>
@@ -46,7 +54,7 @@ const HomeWrapper = styled.section`
     position: relative;
     width: 100%;
     overflow: hidden;
-    
+
     @media (max-width: 768px) {
         height: 750px;
     }
@@ -60,9 +68,8 @@ const SlidesWrapper = styled.div`
     display: flex;
     height: 100%;
     transform: translateX(-${(props) => props.currentSlide * 100}%); // Shift horizontally between slides
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     width: 100%; // Enough space for both slides
-    
 `;
 
 const Slide = styled.div`
@@ -75,7 +82,7 @@ const Slide = styled.div`
     padding: 0 40px;
     width: 100%;
     box-sizing: border-box;
-    
+
     @media (max-width: 768px) {
         height: auto;
         padding: 20px;
