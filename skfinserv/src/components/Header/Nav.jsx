@@ -37,16 +37,14 @@ const Nav = ({ scroll, isRootPage, menuOpen, handleNavLinkClick, closeMenu }) =>
                                 {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
                             </span>
                         </a>
-                        {servicesOpen && (
-                            <ul className="dropdown-service">
-                                <li><a href="/services/budgeting" onClick={handleNavLinkClick}>Budgeting</a></li>
-                                <li><a href="/services/emergency-planning" onClick={handleNavLinkClick}>Emergency Planning</a></li>
-                                <li><a href="/services/retirement-solutions" onClick={handleNavLinkClick}>Retirement Solutions</a></li>
-                                <li><a href="/services/child-education-planning" onClick={handleNavLinkClick}>Child Education Planning</a></li>
-                                <li><a href="/services/wealth-creation" onClick={handleNavLinkClick}>Wealth Creation & Management</a></li>
-                                <li><a href="/services/risk-management" onClick={handleNavLinkClick}>Risk Management</a></li>
-                            </ul>
-                        )}
+                        <Dropdown className={`dropdown-service ${servicesOpen ? 'open' : ''}`} servicesOpen={servicesOpen}>
+                            <li><a href="/services/budgeting" onClick={handleNavLinkClick}>Budgeting</a></li>
+                            <li><a href="/services/emergency-planning" onClick={handleNavLinkClick}>Emergency Planning</a></li>
+                            <li><a href="/services/retirement-solutions" onClick={handleNavLinkClick}>Retirement Solutions</a></li>
+                            <li><a href="/services/child-education-planning" onClick={handleNavLinkClick}>Child Education Planning</a></li>
+                            <li><a href="/services/wealth-creation" onClick={handleNavLinkClick}>Wealth Creation & Management</a></li>
+                            <li><a href="/services/risk-management" onClick={handleNavLinkClick}>Risk Management</a></li>
+                        </Dropdown>
                     </li>
                     <li><a href="/aboutUs" onClick={handleNavLinkClick}>About Us</a></li>
                     <li><a href="/contactUs" onClick={handleNavLinkClick}>Contact Us</a></li>
@@ -55,7 +53,6 @@ const Nav = ({ scroll, isRootPage, menuOpen, handleNavLinkClick, closeMenu }) =>
         </NavContainer>
     );
 };
-
 
 // Styled Components for Nav
 const NavContainer = styled.div`
@@ -92,13 +89,11 @@ const NavWrapper = styled.nav`
                 display: flex;
                 position: absolute;
                 align-items: flex-start;
-                top: 150%;
+                top: 130%;
                 left: 0;
                 backdrop-filter: blur(20px); /* Blurry background */
                 background-color: rgba(250, 249, 249, 0.5); /* Slightly transparent white */
                 box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-                //background-color: white;
-                //box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
                 padding: 20px;
                 border-radius: 10px;
                 z-index: 10;
@@ -115,7 +110,6 @@ const NavWrapper = styled.nav`
 
                         &:hover {
                             text-decoration: underline;
-                            color: #ffffff;
                         }
                     }
                 }
@@ -133,6 +127,27 @@ const NavWrapper = styled.nav`
         ul li a {
             font-size: 0.9rem;
         }
+    }
+`;
+
+// Styled Dropdown Component with Transition
+const Dropdown = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+
+    ${({ servicesOpen }) => servicesOpen && `
+        max-height: 400px; /* Adjust depending on content */
+        opacity: 1;
+    `}
+
+    li a {
+        transition: color 0.2s ease;
     }
 `;
 
