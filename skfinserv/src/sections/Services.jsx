@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ServiceCard from "../components/ServiceCard.jsx";
+import ServiceCard from "../components/Services/ServiceCard.jsx";
 import piggyLogo from '../assets/Images/PiggyBankIcon.png';
 import Emergency from '../assets/Images/Emergency.png';
 import Retirement from '../assets/Images/Retirement.png';

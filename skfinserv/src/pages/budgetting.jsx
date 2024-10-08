@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import ServiceTemplate from "../components/ServiceTemplate.jsx";
+import ServiceTemplate from "../components/Services/ServiceTemplate.jsx";
 import Header from "../sections/header.jsx";
 import Footer from "../sections/footer.jsx";
-import ServicesHeader from "../components/ServicesHeader.jsx";
+import ServicesHeader from "../components/Services/ServicesHeader.jsx";
 import image21 from "../assets/images/Budgeting/image-21.png";
 import image28 from "../assets/images/Budgeting/image-28.png";
 import image27 from "../assets/Images/Budgeting/image-27.png"
@@ -11,7 +11,7 @@ import image26 from "../assets/Images/Budgeting/image-26.png"
 import image25 from "../assets/Images/Budgeting/image-25.png"
 
 
-const Budgetting = () => {
+const Budgeting = () => {
     const serviceContents = [
         {
             heading: "I BUY - WHAT I WANT - WHEN I WANT",
@@ -26,13 +26,10 @@ const Budgetting = () => {
             ],
             quote: (
                 <>
-                    "You would never have enough to save.<br />
-                    It's not about salary, it's about spending choices!!"
+                    You would never have enough to save.
+                    It's not about salary, it's about spending choices!!
                 </>
-            ),
-            imageSrc: image21,
-            imagePosition: "right",
-            alt: "I BUY - WHAT I WANT - WHEN I WANT"
+            )
         },
         {
             heading: "LITTLE THINGS ADD UP TO MAKE BIG DIFFERENCE",
@@ -47,13 +44,10 @@ const Budgetting = () => {
             ],
             quote: (
                 <>
-                    "Watch out for the little things you spend on<br />
-                    And see whether they are worth it!!"
+                    Watch out for the little things you spend on
+                    And see whether they are worth it!!
                 </>
-            ),
-            imageSrc: image28,
-            imagePosition: "left",
-            alt: "LITTLE THINGS ADD UP TO MAKE BIG DIFFERENCE"
+            )
         },
         {
             heading: "DO YOU HAVE A PLAN TO SPEND",
@@ -68,13 +62,10 @@ const Budgetting = () => {
             ],
             quote: (
                 <>
-                    "Budget is not a plan to save<br />
-                    It's a plan to spend!!"
+                    Budget is not a plan to save
+                    It's a plan to spend!!
                 </>
-            ),
-            imageSrc: image27,
-            imagePosition: "right",
-            alt: "DO YOU HAVE A PLAN TO SPEND"
+            )
         },
         {
             heading: "THE GOLDEN RULE OF 21",
@@ -91,13 +82,10 @@ const Budgetting = () => {
             ],
             quote: (
                 <>
-                    "If you really want to do something<br />
-                    You'll find a Way else an Excuse!!"
+                    If you really want to do something
+                    You'll find a Way else an Excuse!!
                 </>
-            ),
-            imageSrc: image26,
-            imagePosition: "left",
-            alt: "THE GOLDEN RULE OF 21"
+            )
         },
         {
             heading: "STOP WISHING START DOING",
@@ -112,18 +100,15 @@ const Budgetting = () => {
             ],
             quote: (
                 <>
-                    "You can't do all at once,<br />
-                    Take small steps but be regular!!"
+                    You can't do all at once,
+                    Take small steps but be regular!!
                 </>
-            ),
-            imageSrc: image25,
-            imagePosition: "right",
-            alt: "STOP WISHING START DOING"
+            )
         }
     ];
 
     return (
-        <BudgettingWrapper>
+        <BudgetingWrapper>
             <Header isRootPage={true} />
 
             <ServicesHeader
@@ -140,29 +125,36 @@ const Budgetting = () => {
                     </>
                 )}
             />
-            {serviceContents.map((content, index) => (
-                <ServiceTemplate
-                    key={index}
-                    heading={content.heading}
-                    paragraphs={content.paragraphs}
-                    quote={content.quote}
-                    imageSrc={content.imageSrc}
-                    imagePosition={content.imagePosition}
-                    alt={content.alt} // Pass the alt text as a prop
-                />
-            ))}
+            <ServicesContent>
+                {serviceContents.map((content, index) => (
+                    <ServiceTemplate
+                        key={index}
+                        heading={content.heading}
+                        paragraphs={content.paragraphs}
+                        quote={content.quote}
+                        imageSrc={content.imageSrc}
+                        imagePosition={content.imagePosition}
+                        alt={content.alt} // Pass the alt text as a prop
+                    />
+                ))}
+            </ServicesContent>
             <Footer/>
-        </BudgettingWrapper>
+        </BudgetingWrapper>
 );
 };
 
-// Styled component for the Budgetting wrapper
-const BudgettingWrapper = styled.div`
+
+const BudgetingWrapper = styled.div`
     display: flex;
     flex-direction: column; /* Align items vertically */
     align-items: center;    /* Center horizontally */
     justify-content: center; /* Center vertically, if height is defined */
 `;
 
+const ServicesContent = styled.div`
+   padding: 50px 20px;
+`;
 
-export default Budgetting;
+
+
+export default Budgeting;

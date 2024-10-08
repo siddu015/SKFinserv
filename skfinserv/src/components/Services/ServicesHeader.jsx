@@ -29,13 +29,18 @@ const SectionWrapper = styled.section`
     align-items: flex-end;
     padding: 20px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1082px) {
         height: 500px; // Increased height for medium screens
         justify-content: center;
         align-items: center;
     }
+
+    @media (max-width: 768px) {
+        height: 450px;
+    }
     
     @media (max-width: 430px) {
+        height: 400px;
         padding: 10px; // Reduce padding for smaller screens
     }
 `;
@@ -45,14 +50,16 @@ const ContentWrapper = styled.div`
     justify-content: space-around;
     align-items: flex-end;
     width: 100%;
-    padding: 50px 20px;
+    padding: 20px 20px;
+    gap: 140px;
 
-    @media (max-width: 991px) {
-        padding: 0 20px;
+    @media (max-width: 1082px) {
+        padding: 60px 20px;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-top: 20px;
+        justify-content: flex-end;
+        margin-top: 80px;
+        gap: 0;
     }
 
     @media (max-width: 768px) {
@@ -64,7 +71,7 @@ const LeftContent = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1082px) {
         max-width: 100%; /* Full width on medium screens */
         text-align: center; /* Center text */
     }
@@ -78,8 +85,9 @@ const RightContent = styled.div`
     display: flex;
     max-width: 40%;
     flex-direction: column;
+    //padding-left: -50px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1082px) {
         max-width: 100%; /* Full width on medium screens */
         text-align: center; /* Center text */
     }
