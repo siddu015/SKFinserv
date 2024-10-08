@@ -87,6 +87,10 @@ const Slide = styled.div`
         height: auto;
         padding: 20px;
     }
+
+    @media (max-width: 430px) {
+        padding: 20px 10px;
+    }
 `;
 
 const DotsContainer = styled.div`
@@ -99,8 +103,8 @@ const DotsContainer = styled.div`
 `;
 
 const Dot = styled.div`
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: ${({ isActive }) => (isActive ? "#fff" : "rgba(255, 255, 255, 0.5)")};
     cursor: pointer;
@@ -108,6 +112,16 @@ const Dot = styled.div`
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        height: 10px;
+        width: 10px;
+    }
+
+    @media (max-width: 430px) {
+        height: 8px;
+        width: 8px;
     }
 `;
 

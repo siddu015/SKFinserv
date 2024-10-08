@@ -101,7 +101,7 @@ const StyledHeading = styled.h2`
     
     @media (max-width: 430px) {
         font-size: 1.4rem;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 `;
 

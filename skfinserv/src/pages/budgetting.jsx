@@ -152,7 +152,15 @@ const BudgetingWrapper = styled.div`
 `;
 
 const ServicesContent = styled.div`
-   padding: 50px 20px;
+    padding: 50px 20px;
+
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+    }
+    
+    @media (max-width: 430px) {
+        padding: 30px 20px;
+    }
 `;
 
 

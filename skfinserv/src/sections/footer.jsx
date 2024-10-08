@@ -206,6 +206,10 @@ const DContainer = styled.div`
         flex-direction: column;
         align-items: center;
     }
+
+    @media (max-width: 430px) {
+        padding: 0 10px;
+    }
 `;
 
 const DisclaimerSection = styled.div`
@@ -315,6 +319,10 @@ const Container = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+    }
+    
+    @media (max-width: 430px) {
+        padding: 0 10px;
     }
 `;
 

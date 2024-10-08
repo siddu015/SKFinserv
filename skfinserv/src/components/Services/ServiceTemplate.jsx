@@ -38,14 +38,14 @@ const Container = styled.div`
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-
+    
     @media (max-width: 430px) {
         padding: 10px; 
     }
 `;
 
 const Heading = styled.h1`
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
 
     @media (max-width: 768px) {

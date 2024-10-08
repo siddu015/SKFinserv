@@ -28,13 +28,13 @@ const AboutUs = () => {
                             </p>
                         </ContentBlock>
                         <ContentBlock>
-                            <h3>Success Stories so far</h3>
+                            <h2>Success Stories so far</h2>
                             <p>
                                 With 1500+ happy families across boundaries, SK Finserv has been managing 50+ crores of assets in the current F.Y.
                             </p>
                         </ContentBlock>
                         <ContentBlock>
-                            <h3>Founders</h3>
+                            <h2>Founders</h2>
                             <p>
                                 <b> Prasanth Reddy (founder) </b>
                                 is an MBA graduate and personal finance expert.
@@ -79,6 +79,14 @@ const ImageSection = styled.div`
 const ContentWrapper = styled.div`
     padding: 50px 20px;
     width: 100%;
+
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+    }
+
+    @media (max-width: 430px) {
+        padding: 30px 20px;
+    }
 `;
 
 const ContentContainer = styled.div`
@@ -94,34 +102,62 @@ const ContentContainer = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+    } 
+    
+    @media (max-width: 430px) {
+        padding: 0 10px;
     }
 `;
 
 const ContentSection = styled.div`
-    text-align: justify;
     min-width: 250px;
     width: 100%;
-
-    p {
-        line-height: 1.6;
+    margin: -20px 0;
+    
+    @media (max-width: 430px) {
+        margin: 0;
     }
-
 `;
 
 const ContentBlock = styled.div`
-    margin: 20px 0;
+    margin: 40px 0;
     text-align: center; 
 
     h2, h3 {
-        margin: 20px 0;
+        margin: 0;
         font-size: 2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem; // Adjust font size for medium screens
+        }
+
+        @media (max-width: 430px) {
+            font-size: 1.2rem; // Further adjust font size for smaller screens
+        }
+    }
+    
+    p {
+        line-height: 1.6;
+        text-align: justify;
+        margin: 10px 0;
+        
+        @media (max-width: 768px) {
+            font-size: 0.95rem; // Adjust font size for medium screens
+        }
+
+        @media (max-width: 430px) {
+            font-size: 0.85rem; // Further adjust font size for smaller screens
+        }
+    }
+    
+    @media (max-width: 768px) {
+        margin: 20px 0;
     }
 
-    p {
+    @media (max-width: 430px) {
         margin: 10px 0;
-        text-align: justify;
-        line-height: 1.6;
     }
+    
 `;
 
 export default AboutUs;

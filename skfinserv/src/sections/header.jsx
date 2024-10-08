@@ -89,6 +89,10 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+
+    @media (max-width: 430px) {
+        padding: 0 10px;
+    }
 `;
 
 const NavContainer = styled.div`
