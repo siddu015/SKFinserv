@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
     .comic-button {
         display: inline-block;
         padding: 10px 16px; /* Default padding */
-        font-size: 1rem; /* Default font size */
+        font-size: 0.9rem; /* Default font size */
         font-weight: bolder;
         font-family: 'Castoro', serif; /* Add this line for font family */
         text-align: center;
@@ -32,7 +32,7 @@ const StyledWrapper = styled.div`
             background-color: #fff;
             color: #ff5252;
             border: 2px solid #ff5252;
-            box-shadow: 5px 5px 0px #ff5252;
+            box-shadow: 5px 5px 0 #ff5252;
         }
 
         &:active {
@@ -46,14 +46,14 @@ const StyledWrapper = styled.div`
     @media (max-width: 768px) {
         .comic-button {
             padding: 10px 16px; /* Smaller padding for mobile */
-            font-size: 0.9rem; /* Smaller font size for mobile */
+            font-size: 0.7rem; /* Smaller font size for mobile */
         }
     }
 
     @media (max-width: 430px) {
         .comic-button {
             padding: 6px 8px; /* Even smaller padding for smaller screens */
-            font-size: 0.75rem; /* Smaller font size for small screens */
+            font-size: 0.6rem; /* Smaller font size for small screens */
         }
     }
 `;
@@ -62,6 +62,7 @@ const PortfolioLoginButton = styled.div`
     display: flex;
     align-items: flex-end;
     margin-left: 1rem;
+    //margin-top: -5px;
 
     @media (max-width: 768px) {
         margin-left: 20px;

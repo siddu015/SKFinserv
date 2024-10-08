@@ -11,9 +11,10 @@ const Logo = styled.h1`
     color: ${({ scroll, isRootPage }) => (scroll || !isRootPage ? "black" : "white")};
     transition: color 0.3s ease, font-size 0.3s ease;
     margin-right: 3rem;
+    margin-top: 30px;
 
     @media (max-width: 1024px) {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin-right: 2rem;
     }
 
