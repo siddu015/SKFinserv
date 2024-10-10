@@ -38,8 +38,9 @@ const StyledWrapper = styled.div`
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        box-shadow: 0 0 0 5px #ffffff80;
         transition: all 0.4s ease-in-out;
+
+        box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.5);
     }
 
     .initial {

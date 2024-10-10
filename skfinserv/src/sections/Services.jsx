@@ -21,31 +21,31 @@ const Services = () => {
             image: Emergency,
             title: 'Emergency Planning',
             description: 'Emergencies don’t knock the doors. Expect the unexpected and Be prepared\n',
-            link: '/emergency-planning',
+            link: '/service/emergency',
         },
         {
             image: Retirement,
             title: 'Retirement Solutions',
             description: 'The good part is we are living longer. The sad part is we will have to pay for it\n',
-            link: '/retirement-solutions',
+            link: '/service/retirement',
         },
         {
             image: ChildEducation,
             title: 'Child Education Planning',
             description: 'Choices are immense. Don’t let their dreams be dreams; it’s time to make their dreams a reality\n',
-            link: '/child-education-planning',
+            link: '/service/childEducation',
         },
         {
             image: AssetManagement,
             title: 'Wealth Creation & Management',
             description: 'Wealth creation is a process of building a stable source of income to achieve future goals with financial security\n',
-            link: '/wealth-creation-management',
+            link: '/service/wealth',
         },
         {
             image: RiskManagement,
             title: 'Risk Management',
             description: 'Insurance is the glue that holds the plan together. Make sure you have a cover when you need it\n',
-            link: '/risk-management',
+            link: '/service/riskManagement',
         },
     ];
 

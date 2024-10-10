@@ -4,15 +4,19 @@ import styled from 'styled-components';
 const ServicesHeader = ({ mainHeading, description }) => {
     return (
         <SectionWrapper>
-            <ContentWrapper>
-                <LeftContent>
-                    <SmallHeading>SERVICES</SmallHeading>
-                    <MainHeading>{mainHeading}</MainHeading> {/* Passed via props */}
-                </LeftContent>
-                <RightContent>
-                    <Description>{description}</Description> {/* Passed via props */}
-                </RightContent>
-            </ContentWrapper>
+            <Service>
+                <Container>
+                    <ContentWrapper>
+                        <LeftContent>
+                            <SmallHeading>SERVICES</SmallHeading>
+                            <MainHeading>{mainHeading}</MainHeading> {/* Passed via props */}
+                        </LeftContent>
+                        <RightContent>
+                            <Description>{description}</Description> {/* Passed via props */}
+                        </RightContent>
+                    </ContentWrapper>
+                </Container>
+            </Service>
         </SectionWrapper>
     );
 };
@@ -20,76 +24,65 @@ const ServicesHeader = ({ mainHeading, description }) => {
 // Styled Components
 const SectionWrapper = styled.section`
     width: 100%;
-    position: relative;
-    height: 420px;
+    height: 400px;
     background-color: rgb(20, 49, 86);
     color: white;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 20px;
 
-    @media (max-width: 1082px) {
-        height: 500px; // Increased height for medium screens
-        justify-content: center;
-        align-items: center;
+    @media (max-width: 1024px) {
+        height: 450px;
+        justify-content: flex-start;
+        align-items: flex-end;
     }
 
     @media (max-width: 768px) {
-        height: 450px;
+        height: 400px;
     }
     
     @media (max-width: 430px) {
-        height: 400px;
-        padding: 10px; // Reduce padding for smaller screens
+        height: 350px;
+    }
+`;
+
+const Service = styled.section`
+    padding: 20px;
+`;
+
+const Container = styled.section`
+    max-width: 1200px;
+    padding: 20px;
+
+    @media (max-width: 430px) {
+        padding: 0 10px;
     }
 `;
 
 const ContentWrapper = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
-    padding: 20px 20px;
-    gap: 140px;
 
-    @media (max-width: 1082px) {
-        padding: 60px 20px;
+    @media (max-width: 1024px) {
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 80px;
-        gap: 0;
-    }
-
-    @media (max-width: 768px) {
-        padding: 30px 20px; // Adjust padding for smaller screens
+        align-items: flex-start;
     }
 `;
 
 const LeftContent = styled.div`
     display: flex;
     flex-direction: column;
-
-    @media (max-width: 1082px) {
-        max-width: 100%; /* Full width on medium screens */
-        text-align: center; /* Center text */
-    }
-
-    @media (max-width: 430px) {
-        font-size: 0.9rem; // Slightly reduce font size
-    }
 `;
 
 const RightContent = styled.div`
     display: flex;
-    max-width: 40%;
+    max-width: 38%;
+    
     flex-direction: column;
-    //padding-left: -50px;
 
-    @media (max-width: 1082px) {
-        max-width: 100%; /* Full width on medium screens */
-        text-align: center; /* Center text */
+    @media (max-width: 1024px) {
+        max-width: 100%; 
     }
 
     @media (max-width: 430px) {
@@ -102,6 +95,14 @@ const SmallHeading = styled.h5`
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem; // Adjust font size for medium screens
+    }
+
+    @media (max-width: 430px) {
+        font-size: 0.6rem; // Further reduce font size for smaller screens
+    }
 `;
 
 const MainHeading = styled.h1`
@@ -116,7 +117,7 @@ const MainHeading = styled.h1`
     }
 
     @media (max-width: 430px) {
-        font-size: 2.5rem; // Further reduce font size for smaller screens
+        font-size: 2rem; // Further reduce font size for smaller screens
     }
 `;
 

@@ -20,11 +20,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-width: 350px;
 }
 
 /* Body styling to ensure full-width alignment */
 body {
-  min-width: 320px;
+  min-width: 350px;
   min-height: 100vh;
   background-color: #f1f1f1;
 }

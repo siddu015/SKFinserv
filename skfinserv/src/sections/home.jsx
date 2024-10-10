@@ -54,6 +54,8 @@ const HomeWrapper = styled.section`
     position: relative;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 25px 25px;
 
     @media (max-width: 768px) {
         height: 750px;

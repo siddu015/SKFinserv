@@ -4,11 +4,11 @@ import ServiceTemplate from "../components/Services/ServiceTemplate.jsx";
 import Header from "../sections/header.jsx";
 import Footer from "../sections/footer.jsx";
 import ServicesHeader from "../components/Services/ServicesHeader.jsx";
-import image21 from "../assets/images/Budgeting/image-21.png";
-import image28 from "../assets/images/Budgeting/image-28.png";
-import image27 from "../assets/Images/Budgeting/image-27.png"
-import image26 from "../assets/Images/Budgeting/image-26.png"
-import image25 from "../assets/Images/Budgeting/image-25.png"
+// import image21 from "../assets/images/Budgeting/image-21.png";
+// import image28 from "../assets/images/Budgeting/image-28.png";
+// import image27 from "../assets/Images/Budgeting/image-27.png"
+// import image26 from "../assets/Images/Budgeting/image-26.png"
+// import image25 from "../assets/Images/Budgeting/image-25.png"
 
 
 const Budgeting = () => {
@@ -120,7 +120,7 @@ const Budgeting = () => {
                 )}
                 description={(
                     <>
-                        Budgeting solutions for you, to help you plan <br/>
+                        Budgeting solutions for you, to help you plan
                         your expenses, save money, and reduce debt.
                     </>
                 )}
@@ -152,7 +152,7 @@ const BudgetingWrapper = styled.div`
 `;
 
 const ServicesContent = styled.div`
-    padding: 50px 20px;
+    padding: 60px 20px;
 
     @media (max-width: 768px) {
         padding: 40px 20px;

@@ -58,6 +58,7 @@ const AboutUs = () => {
 
 // Styled Components
 const AboutWrapper = styled.div`
+    width: 100%;
     background-color: white;
 `;
 
@@ -77,8 +78,8 @@ const ImageSection = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-    padding: 50px 20px;
     width: 100%;
+    padding: 50px 20px;
 
     @media (max-width: 768px) {
         padding: 40px 20px;

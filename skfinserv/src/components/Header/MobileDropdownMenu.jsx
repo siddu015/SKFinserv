@@ -36,12 +36,12 @@ const MobileDropdownMenu = ({ menuOpen, servicesOpen, toggleServicesDropdown, cl
                         </span>
                     </a>
                     <Dropdown className={`dropdown ${servicesOpen ? 'open' : ''}`} servicesOpen={servicesOpen}>
-                        <li><a href="/services/budgeting">Budgeting</a></li>
-                        <li><a href="/services/emergency-planning">Emergency Planning</a></li>
-                        <li><a href="/services/retirement-solutions">Retirement Solutions</a></li>
-                        <li><a href="/services/child-education-planning">Child Education Planning</a></li>
-                        <li><a href="/services/wealth-creation">Wealth Creation & Management</a></li>
-                        <li><a href="/services/risk-management">Risk Management</a></li>
+                        <li><a href="/service/budgeting">Budgeting</a></li>
+                        <li><a href="/service/emergency">Emergency Planning</a></li>
+                        <li><a href="/service/retirement">Retirement Solutions</a></li>
+                        <li><a href="/service/childEducation">Child Education Planning</a></li>
+                        <li><a href="/service/wealth">Wealth Creation & Management</a></li>
+                        <li><a href="/service/riskManagement">Risk Management</a></li>
                     </Dropdown>
                 </li>
                 <li className="about-us"><a href="/aboutUs" onClick={handleNavLinkClick}>About Us</a></li>

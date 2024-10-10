@@ -38,12 +38,12 @@ const Nav = ({ scroll, isRootPage, menuOpen, handleNavLinkClick, closeMenu }) =>
                             </span>
                         </a>
                         <Dropdown className={`dropdown-service ${servicesOpen ? 'open' : ''}`} servicesOpen={servicesOpen}>
-                            <li><a href="/services/budgeting" onClick={handleNavLinkClick}>Budgeting</a></li>
-                            <li><a href="/services/emergency-planning" onClick={handleNavLinkClick}>Emergency Planning</a></li>
-                            <li><a href="/services/retirement-solutions" onClick={handleNavLinkClick}>Retirement Solutions</a></li>
-                            <li><a href="/services/child-education-planning" onClick={handleNavLinkClick}>Child Education Planning</a></li>
-                            <li><a href="/services/wealth-creation" onClick={handleNavLinkClick}>Wealth Creation & Management</a></li>
-                            <li><a href="/services/risk-management" onClick={handleNavLinkClick}>Risk Management</a></li>
+                            <li><a href="/service/budgeting" onClick={handleNavLinkClick}>Budgeting</a></li>
+                            <li><a href="/service/emergency" onClick={handleNavLinkClick}>Emergency Planning</a></li>
+                            <li><a href="/service/retirement" onClick={handleNavLinkClick}>Retirement Solutions</a></li>
+                            <li><a href="/service/childEducation" onClick={handleNavLinkClick}>Child Education Planning</a></li>
+                            <li><a href="/service/wealth" onClick={handleNavLinkClick}>Wealth Creation & Management</a></li>
+                            <li><a href="/service/riskManagement" onClick={handleNavLinkClick}>Risk Management</a></li>
                         </Dropdown>
                     </li>
                     <li><a href="/aboutUs" onClick={handleNavLinkClick}>About Us</a></li>
