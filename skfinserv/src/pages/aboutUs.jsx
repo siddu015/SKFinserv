@@ -119,7 +119,7 @@ const ContentSection = styled.div`
         margin: 0;
     }
     @media (max-width: 430px) {
-        margin: 20px 0;
+        margin-bottom: 20px;
     }
 `;
 

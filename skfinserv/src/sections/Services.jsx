@@ -72,8 +72,7 @@ const Services = () => {
 const StyledSection = styled.section`
     width: 100%;
     padding: 50px 20px; 
-    background-color: #f5f5f5; 
-    margin: 40px 0; 
+    margin: 50px 0; 
     display: flex;
     flex-direction: column;
     align-items: center;

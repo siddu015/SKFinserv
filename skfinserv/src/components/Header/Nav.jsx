@@ -31,7 +31,7 @@ const Nav = ({ scroll, isRootPage, menuOpen, handleNavLinkClick, closeMenu }) =>
                     <li><a href="/" onClick={handleNavLinkClick}>Home</a></li>
                     {/* Services Dropdown with Icon */}
                     <li className="dropdown-item" ref={dropdownRef}>
-                        <a href="#" onClick={toggleServicesDropdown} style={{ display: 'flex', alignItems: 'center' }}>
+                        <a onClick={toggleServicesDropdown} style={{ display: 'flex', alignItems: 'center' }}>
                             Services
                             <span style={{ marginLeft: '5px', marginTop: "5px" }}>
                                 {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}

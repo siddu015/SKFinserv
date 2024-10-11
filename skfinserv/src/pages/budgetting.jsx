@@ -4,11 +4,6 @@ import ServiceTemplate from "../components/Services/ServiceTemplate.jsx";
 import Header from "../sections/header.jsx";
 import Footer from "../sections/footer.jsx";
 import ServicesHeader from "../components/Services/ServicesHeader.jsx";
-// import image21 from "../assets/images/Budgeting/image-21.png";
-// import image28 from "../assets/images/Budgeting/image-28.png";
-// import image27 from "../assets/Images/Budgeting/image-27.png"
-// import image26 from "../assets/Images/Budgeting/image-26.png"
-// import image25 from "../assets/Images/Budgeting/image-25.png"
 
 
 const Budgeting = () => {
@@ -108,7 +103,7 @@ const Budgeting = () => {
     ];
 
     return (
-        <BudgetingWrapper>
+        <>
             <Header isRootPage={true} />
 
             <ServicesHeader
@@ -139,21 +134,16 @@ const Budgeting = () => {
                 ))}
             </ServicesContent>
             <Footer/>
-        </BudgetingWrapper>
+        </>
 );
 };
 
 
-const BudgetingWrapper = styled.div`
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center; /* Center vertically, if height is defined */
-`;
+
 
 const ServicesContent = styled.div`
     padding: 60px 20px;
-
+    
     @media (max-width: 768px) {
         padding: 40px 20px;
     }

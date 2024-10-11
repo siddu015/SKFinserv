@@ -7,12 +7,6 @@ const ServiceTemplate = ({ heading, paragraphs, quote, imageSrc, imagePosition =
             <Heading>{heading}</Heading>
 
             <Content>
-                {/*/!* Image on the left *!/*/}
-                {/*{imagePosition === 'left' && (*/}
-                {/*    <ImageContainer imagePosition={imagePosition}>*/}
-                {/*        <Image src={imageSrc} alt={altText} />*/}
-                {/*    </ImageContainer>*/}
-                {/*)}*/}
 
                 <TextContainer imagePosition={imagePosition}>
                     {paragraphs.map((paragraph, index) => (
@@ -21,12 +15,6 @@ const ServiceTemplate = ({ heading, paragraphs, quote, imageSrc, imagePosition =
                     <Quote>{quote}</Quote>
                 </TextContainer>
 
-                {/*/!* Image on the right *!/*/}
-                {/*{imagePosition === 'right' && (*/}
-                {/*    <ImageContainer imagePosition={imagePosition}>*/}
-                {/*        <Image src={imageSrc} alt={altText} />*/}
-                {/*    </ImageContainer>*/}
-                {/*)}*/}
             </Content>
         </Container>
     );
@@ -35,25 +23,30 @@ const ServiceTemplate = ({ heading, paragraphs, quote, imageSrc, imagePosition =
 // Styled Components
 const Container = styled.div`
     max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
     padding: 20px;
-    
+    margin: 0 auto 20px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 10px;
+    }
     @media (max-width: 430px) {
-        padding: 10px; 
+        padding: 10px;
+        margin-bottom: 10px;
     }
 `;
 
 const Heading = styled.h1`
     font-size: 2rem;
     margin: 0;
+    text-transform: uppercase;
 
     @media (max-width: 768px) {
-        font-size: 1.5rem; // Adjust font size for medium screens
+        font-size: 1.5rem; 
     }
 
     @media (max-width: 430px) {
-        font-size: 1.2rem; // Further adjust font size for smaller screens
+        font-size: 1.2rem; 
     }
 `;
 
@@ -64,8 +57,8 @@ const Content = styled.div`
     padding: 20px 0;
 
     @media (max-width: 768px) {
-        flex-direction: column; // Stack elements vertically on medium screens
-        align-items: center; // Center align items
+        flex-direction: column; 
+        align-items: center; 
     }
 `;
 
@@ -74,7 +67,7 @@ const TextContainer = styled.div`
     text-align: justify;
 
     @media (max-width: 768px) {
-        margin-top: 10px; // Add top margin for spacing
+        margin-top: 10px;
     }
 `;
 
@@ -83,11 +76,11 @@ const Paragraph = styled.p`
     line-height: 1.6;
 
     @media (max-width: 768px) {
-        font-size: 0.95rem; // Adjust font size for medium screens
+        font-size: 0.95rem;
     }
 
     @media (max-width: 430px) {
-        font-size: 0.85rem; // Further adjust font size for smaller screens
+        font-size: 0.85rem; 
     }
 `;
 
@@ -97,41 +90,12 @@ const Quote = styled.blockquote`
     font-weight: bold;
 
     @media (max-width: 768px) {
-        font-size: 1rem; // Adjust font size for medium screens
+        font-size: 1rem; 
     }
 
     @media (max-width: 430px) {
-        font-size: 0.9rem; // Further adjust font size for smaller screens
+        font-size: 0.9rem;
     }
 `;
-
-// const ImageContainer = styled.div`
-//     flex: 0 0 40%;
-//     display: flex;
-//     justify-content: ${(props) => (props.imagePosition === 'left' ? 'flex-start' : 'center')}; /* Conditional alignment */
-//
-//     @media (max-width: 768px) {
-//         flex: 0 0 80%; // Make image container wider on medium screens
-//         margin-bottom: 20px; // Add bottom margin for spacing
-//     }
-//
-//     @media (max-width: 430px) {
-//         flex: 0 0 100%; // Full width for images on smaller screens
-//         justify-content: center; // Center the image
-//     }
-// `;
-//
-// const Image = styled.img`
-//     max-width: 300px;
-//     height: auto;
-//
-//     @media (max-width: 768px) {
-//         max-width: 80%; // Reduce max-width for medium screens
-//     }
-//
-//     @media (max-width: 430px) {
-//         max-width: 60%; // Full width for images on smaller screens
-//     }
-// `;
 
 export default ServiceTemplate;

@@ -8,6 +8,8 @@ import AboutUs from './pages/aboutUs.jsx';
 import Budgeting from './pages/Budgetting.jsx';
 import Emergency from './pages/Emergency.jsx';
 import ChildEducation from "./pages/ChildEducation.jsx";
+import Retirement from "./pages/Retirement.jsx";
+import RiskManagement from "./pages/RiskManagement.jsx";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,12 @@ const router = createBrowserRouter([
     },{
         path: "/service/childEducation",
         element: <ChildEducation/>
+    },{
+        path: "/service/retirement",
+        element: <Retirement/>
+    },{
+        path: "/service/riskManagement",
+        element: <RiskManagement />
     },
 ]);
 

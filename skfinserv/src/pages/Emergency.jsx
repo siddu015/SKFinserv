@@ -77,7 +77,7 @@ const Emergency = () => {
     ];
 
     return (
-        <EmergencyWrapper>
+        <>
             <Header isRootPage={true} />
 
             <ServicesHeader
@@ -105,17 +105,10 @@ const Emergency = () => {
                 ))}
             </ServicesContent>
             <Footer/>
-        </EmergencyWrapper>
+        </>
     );
 };
 
-
-const EmergencyWrapper = styled.div`
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center; /* Center vertically, if height is defined */
-`;
 
 const ServicesContent = styled.div`
     padding: 60px 20px;
