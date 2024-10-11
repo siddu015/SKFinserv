@@ -82,7 +82,7 @@ const ContentWrapper = styled.div`
     padding: 50px 20px;
 
     @media (max-width: 768px) {
-        padding: 40px 20px;
+        //padding: 40px 20px;
     }
 
     @media (max-width: 430px) {
@@ -115,8 +115,11 @@ const ContentSection = styled.div`
     width: 100%;
     margin: -20px 0;
     
-    @media (max-width: 430px) {
+    @media (max-width: 768px) {
         margin: 0;
+    }
+    @media (max-width: 430px) {
+        margin: 20px 0;
     }
 `;
 

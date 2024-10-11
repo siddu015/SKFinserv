@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BrainIcon from "../../assets/icons/brain.png"
 
 const SlideThree = () => (
     <SlideWrapper>
@@ -16,7 +17,7 @@ const SlideThree = () => (
                 <CircleLabel className="plan">PLAN</CircleLabel>
                 <CircleLabel className="action">ACTION</CircleLabel>
 
-                <CenterIcon>🧠</CenterIcon>
+                <CenterIcon><img src={BrainIcon} alt="Brain"/></CenterIcon>
             </DiagramContainer>
         </ContentWrapper>
     </SlideWrapper>
@@ -176,15 +177,18 @@ const CenterIcon = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -65%);
-    font-size: 2rem;
+    width: 40px;
+    height: 40px;
 
     @media (max-width: 768px) {
         top: 48%;
-        font-size: 1.8rem;
+        width: 25px;
+        height: 25px;
     }
 
     @media (max-width: 430px) {
-        font-size: 1.2rem;
+        width: 20px;
+        height: 20px;
     }
 `;
 

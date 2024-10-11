@@ -130,8 +130,8 @@ const StyledWrapper = styled.div`
     }
     @media (max-width: 768px) {
         .card {
-            max-width: 280px;
-            height: 180px;
+            max-width: 300px;
+            height: 200px;
         }
         
         .card__image {
@@ -146,7 +146,7 @@ const StyledWrapper = styled.div`
         
         .card__description {
             font-size: 0.9rem;
-            margin-top: 4px;
+            margin-top: 5px;
         }
 
         .card__button-wrapper {
@@ -156,8 +156,8 @@ const StyledWrapper = styled.div`
 
     @media (max-width: 430px) {
         .card {
-            max-width: 240px; /* Responsive width */
-            max-height: 160px;
+            max-width: 260px; /* Responsive width */
+            max-height: 180px;
         }
 
         .card__image {

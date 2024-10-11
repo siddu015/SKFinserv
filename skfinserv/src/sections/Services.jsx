@@ -71,7 +71,7 @@ const Services = () => {
 // Styled components
 const StyledSection = styled.section`
     width: 100%;
-    padding: 40px 20px; 
+    padding: 50px 20px; 
     background-color: #f5f5f5; 
     margin: 40px 0; 
     display: flex;
@@ -79,11 +79,11 @@ const StyledSection = styled.section`
     align-items: center;
 
     @media (max-width: 768px) {
-        margin: 20px 0;
+        margin:30px 0;
     }
     @media (max-width: 430px) {
-        margin: 10px 0;
-        padding: 30px 20px;
+        //margin: 10px 0;
+        padding: 40px 20px;
     }
 `;
 
@@ -114,6 +114,7 @@ const StyledGrid = styled.div`
     padding: 0 20px; 
     
     @media (max-width: 630px) {
+        padding: 0 10px;
         grid-template-columns: 1fr;
         gap: 0;
     }

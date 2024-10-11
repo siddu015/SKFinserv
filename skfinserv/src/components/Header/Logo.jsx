@@ -12,6 +12,7 @@ const Logo = styled.h1`
     transition: color 0.3s ease, font-size 0.3s ease;
     margin-right: 3rem;
     margin-top: 30px;
+    
 
     @media (max-width: 1024px) {
         font-size: 1.4rem;
@@ -19,11 +20,13 @@ const Logo = styled.h1`
     }
 
     @media (max-width: 768px) {
+        margin-top: 25px;
         font-size: 1.2rem;
         margin-right: 1.5rem;
     }
 
     @media (max-width: 430px) {
+        margin-top: 20px;
         font-size: 1.1rem;
         margin-right: 0.5rem;
     }

@@ -5,7 +5,9 @@ const PortfolioLogin = () => {
     return (
         <PortfolioLoginButton>
             <StyledWrapper>
-                <button className="comic-button">Portfolio Login</button>
+                <a href="https://skwealth.investwell.app/app/#/login">
+                    <button className="comic-button"><a href="/"></a> Portfolio Login</button>
+                </a>
             </StyledWrapper>
         </PortfolioLoginButton>
     );
