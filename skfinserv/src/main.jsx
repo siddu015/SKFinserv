@@ -10,6 +10,8 @@ import Emergency from './pages/Emergency.jsx';
 import ChildEducation from "./pages/ChildEducation.jsx";
 import Retirement from "./pages/Retirement.jsx";
 import RiskManagement from "./pages/RiskManagement.jsx";
+import Wealth from "./pages/Wealth.jsx";
+import ContactUs from "./pages/ContactUs.jsx"
 
 const router = createBrowserRouter([
     {
@@ -34,6 +36,12 @@ const router = createBrowserRouter([
     },{
         path: "/service/riskManagement",
         element: <RiskManagement />
+    },{
+        path: "/service/wealth",
+        element: <Wealth />
+    },{
+        path: "/contactUs",
+        element: <ContactUs />
     },
 ]);
 

@@ -187,6 +187,8 @@ const GetInTouch = styled.div`
 
     @media (max-width: 430px) {
         margin-top: 60px;
+        margin-bottom: -30px;
+        
         div {
             img {
                 width: 16px;

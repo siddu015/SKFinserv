@@ -147,15 +147,20 @@ const IconsContainer = styled.div`
 const StyledIconCard = styled.div`
     flex: 1;
     width: 300px;
-    height: 200px;
+    height: 300px;
     padding: 20px;
-    border-radius: 20px;
-    background: rgba(255, 169, 106, 0.30);
+    //border-radius: 20px;
+    //background: rgba(255, 169, 106, 0.30);
     margin: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    border-radius: 25px;
+    background: #b19b8c;
+    box-shadow: inset 5px 5px 10px #6e6057,
+    inset -5px -5px 10px #f4d6c1;
+    
     @media (max-width: 768px) {
         margin-bottom: 20px;
         max-width: 90%;

@@ -21,7 +21,7 @@ const InfoSection = styled.section`
     margin-bottom: 20px;
     
     @media (max-width: 768px) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     @media (max-width: 430px) {
         padding: 10px;

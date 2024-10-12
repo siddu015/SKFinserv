@@ -28,11 +28,10 @@ const Container = styled.div`
     margin: 0 auto 20px;
 
     @media (max-width: 768px) {
-        margin-bottom: 10px;
     }
+    
     @media (max-width: 430px) {
         padding: 10px;
-        margin-bottom: 10px;
     }
 `;
 
@@ -58,7 +57,12 @@ const Content = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column; 
-        align-items: center; 
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    @media (max-width: 430px) {
+        padding: 0;
     }
 `;
 
@@ -90,11 +94,11 @@ const Quote = styled.blockquote`
     font-weight: bold;
 
     @media (max-width: 768px) {
-        font-size: 1rem; 
+        font-size: 1.1rem; 
     }
 
     @media (max-width: 430px) {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 `;
 
