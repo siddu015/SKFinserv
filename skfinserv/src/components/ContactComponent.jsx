@@ -48,6 +48,7 @@ const ContactWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
     
     .contact-container {
         max-width: 1200px;
@@ -208,6 +209,7 @@ const GetInTouch = styled.div`
     @media (max-width: 1248px) {
         div {
             p {
+                color: white;
                 margin-bottom:25px;
             }
         }
@@ -220,6 +222,8 @@ const GetInTouch = styled.div`
             }
             
             p {
+                color: white;
+                text-decoration: none;
                 margin-bottom: 20px;
             }
         }
@@ -228,6 +232,8 @@ const GetInTouch = styled.div`
     @media (max-width: 430px) {
         div {
             img {
+                color: white;
+                text-decoration: none;
                 width: 16px;
             }
         }

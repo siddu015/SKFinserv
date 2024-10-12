@@ -48,14 +48,16 @@ const Home = () => {
 
 // Styled Components
 const HomeWrapper = styled.section`
+
     background: linear-gradient(to bottom right, rgba(10, 28, 64, 0.98) 12%, rgba(38, 116, 160) 63%, rgba(175, 202, 220, 0.99) 100%);
+    //background: rgba(11, 23, 39, 0.9);
     color: rgba(175, 202, 220, 0.99);
     height: 800px;
     position: relative;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 25px 25px;
+    //border-radius: 0 0 25px 25px;
 
     @media (max-width: 768px) {
         height: 750px;

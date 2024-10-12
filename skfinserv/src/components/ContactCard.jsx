@@ -4,7 +4,16 @@ import styled from "styled-components";
 const Form = () => {
     return (
         <StyledWrapper>
-            <form action="#" className="form" data-netlify="true">
+            <form
+                className="form"
+                method="POST"
+                name="customContact"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+            >
+                <input type="hidden" name="form-name" value="customContact" />
+                <input type="hidden" name="bot-field" /> {/* Honeypot field */}
+
                 <div className="flex">
                     <label>
                         <input
@@ -33,9 +42,7 @@ const Form = () => {
                         type="tel"
                         name="phoneNumber"
                         onKeyPress={(e) => {
-                            if (!/^\d$/.test(e.key)) {
-                                e.preventDefault(); // Block non-digit characters
-                            }
+                            if (!/^\d$/.test(e.key)) e.preventDefault();
                         }}
                         required
                     />
@@ -47,7 +54,6 @@ const Form = () => {
                         className="input"
                         type="email"
                         name="email"
-                        inputMode="email"
                         required
                     />
                     <span>email</span>
@@ -59,9 +65,7 @@ const Form = () => {
                         name="services"
                         required
                     >
-                        <option value="" hidden>
-                            Select Service
-                        </option>
+                        <option value="" hidden>Select Service</option>
                         <option value="Budgeting">Budgeting</option>
                         <option value="Emergency Planning">Emergency Planning</option>
                         <option value="Retirement Solutions">Retirement Solutions</option>
@@ -76,17 +80,17 @@ const Form = () => {
           <textarea
               className="input"
               name="message"
-              placeholder= "message"
+              placeholder="message"
               rows={3}
               required
           />
                 </label>
 
                 <button className="fancy" type="submit">
-                    <span className="top-key"/>
+                    <span className="top-key" />
                     <span className="text">submit</span>
-                    <span className="bottom-key-1"/>
-                    <span className="bottom-key-2"/>
+                    <span className="bottom-key-1" />
+                    <span className="bottom-key-2" />
                 </button>
             </form>
         </StyledWrapper>

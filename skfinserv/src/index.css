@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 * {
   margin: 0;
@@ -55,3 +55,46 @@ img {
   align-items: center;
 }
 
+/*testing*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'chalk';
+  src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'header';
+  src: url('/fonts/FeelingSoon-1GVr0.otf') format('opentype');
+}
+@font-face {
+  font-family: 'foot';
+  src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
+}
+@font-face {
+  font-family: 'heading';
+  src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
+}
+body
+{
+  overflow-x: hidden;
+}
+/* Header styles */
+.header {
+  background-color: #ffffffad;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @apply p-4 fixed z-10 backdrop-blur
+}
+
+/* Logo styles */
+.headerimg{
+  width: 250px;
+  height: 60px;
+  padding-right: 20px;
+}

@@ -81,6 +81,7 @@ const Footer = () => {
 
 // Styled Components
 const FooterWrapper = styled.footer`
+    margin-top: 40px ;
     width: 100%;
     background: linear-gradient(to bottom, rgba(94, 152, 185, 0.3) 8%, rgba(94, 152, 185, 0.6) 66%);
 `;

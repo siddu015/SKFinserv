@@ -25,7 +25,7 @@ const ServicesHeader = ({ mainHeading, description }) => {
 const SectionWrapper = styled.section`
     width: 100%;
     height: 400px;
-    background-color: rgb(20, 49, 86);
+    background-color: #0b1727;
     color: white;
     display: flex;
     justify-content: center;

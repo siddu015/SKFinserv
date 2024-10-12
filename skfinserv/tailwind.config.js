@@ -1,11 +1,9 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Adjust according to your project structure
-  darkMode: false,
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',  // Ensure all your React files are included
+  ],
   theme: {
     extend: {},
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-}
+};
