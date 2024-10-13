@@ -33,7 +33,7 @@ const Nav = ({ scroll, isRootPage, menuOpen, handleNavLinkClick, closeMenu }) =>
                     <li className="dropdown-item" ref={dropdownRef}>
                         <a onClick={toggleServicesDropdown} style={{ display: 'flex', alignItems: 'center' }}>
                             Services
-                            <span style={{ marginLeft: '5px', marginTop: "5px" }}>
+                            <span style={{ marginLeft: '5px', marginTop: "-1px"}}>
                                 {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
                             </span>
                         </a>

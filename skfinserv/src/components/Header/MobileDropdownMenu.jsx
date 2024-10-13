@@ -31,7 +31,7 @@ const MobileDropdownMenu = ({ menuOpen, servicesOpen, toggleServicesDropdown, cl
                 <li className="dropdown-item">
                     <a onClick={toggleServicesDropdown} style={{ display: 'flex', alignItems: 'center', marginTop: '-5px'}}>
                         Services
-                        <span style={{ marginLeft: '5px', marginTop: "6px" }}>
+                        <span style={{ marginLeft: '5px', marginTop: "0" }}>
                             {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
                         </span>
                     </a>

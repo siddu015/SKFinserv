@@ -50,6 +50,10 @@ const ContactWrapper = styled.div`
     justify-content: center;
     padding: 40px;
     
+    @media (max-width: 430px) {
+        padding: 20px;
+    }
+    
     .contact-container {
         max-width: 1200px;
         display: flex;
@@ -61,7 +65,7 @@ const ContactWrapper = styled.div`
         position: relative;
 
         @media (max-width: 1248px) {
-            width: 95%;
+            width: 100%;
             flex-direction: column; /* Stack sections vertically below 1290px */
             gap: 1rem;
         }
@@ -71,6 +75,7 @@ const ContactWrapper = styled.div`
         }
         
         @media (max-width: 430px) {
+            //width: 110%;
             padding: 10px;
         }
     }

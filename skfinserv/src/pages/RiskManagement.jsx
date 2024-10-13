@@ -121,8 +121,12 @@ const Section1 = styled.section`
     padding: 20px;
     margin-bottom: 40px;
     
+    
+    
     img {
         max-width: 80%;
+        display: block; /* Centering the image */
+        margin: 0 auto;
     }
 
     @media (max-width: 768px) {
@@ -175,6 +179,8 @@ const Section3 = styled.section`
     img {
         //max-width: 1160px;
         max-width: 86%;
+        display: block; /* Centering the image */
+        margin: 0 auto;
     }
 
     @media (max-width: 768px) {

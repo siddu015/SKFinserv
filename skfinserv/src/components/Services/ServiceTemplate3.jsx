@@ -47,6 +47,8 @@ const SectionImage = styled.img`
     width: 80%;
     max-width: 600px;
     height: auto;
+    display: block; /* Centering the image */
+    margin: 0 auto; /* Centering the image */
 
     @media (max-width: 768px) {
         width: 70%;
@@ -72,6 +74,8 @@ const HighlightText = styled.h3`
     font-size: 22px;
     color: #3980a9;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: 768px) {
         font-size: 1rem;
@@ -84,7 +88,12 @@ const HighlightText = styled.h3`
 
 
 const IconImage = styled.img`
+    display: block; /* Centering the image */
+    margin: 0 auto; /* Centering the image */
+    align-items: center;
+    justify-content: center;
     width: 100px;
+
 
     @media (max-width: 768px) {
         width: 80px;
