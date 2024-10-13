@@ -8,6 +8,52 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <form name="customContact" netlify hidden>
+      <input type="hidden" name="form-name" value="customContact" />
+
+      <input
+              type="text"
+              name="firstName"
+      />
+
+      <input
+              type="text"
+              name="lastName"
+      />
+
+      <input
+              type="tel"
+              name="phoneNumber"
+      />
+
+      <input
+              type="email"
+              name="email"
+              inputMode="email"
+      />
+
+      <select name="services">
+        <option value="" hidden>Select Service</option>
+        <option value="Budgeting">Budgeting</option>
+        <option value="Emergency Planning">Emergency Planning</option>
+        <option value="Retirement Solutions">Retirement Solutions</option>
+        <option value="Child Education Planning">
+          Child Education Planning
+        </option>
+        <option value="Wealth Creation & Management">
+          Wealth Creation & Management
+        </option>
+        <option value="Risk Management">Risk Management</option>
+      </select>
+
+      <textarea
+              name="message"
+              placeholder="Message"
+      ></textarea>
+
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

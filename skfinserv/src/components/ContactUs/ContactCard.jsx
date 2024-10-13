@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Form = () => {
     return (
         <StyledWrapper>
-            <form className="form" method="POST" name="customContact" data-netlify="true">
-                <input type="hidden" name="form-name" value="customContact"/>
+            <form
+                className="form"
+                method="POST"
+                name="customContact"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+            >
+                {/* Hidden input to prevent spam bots */}
+                <input type="hidden" name="form-name" value="customContact" />
+                <input type="hidden" name="bot-field" />
+
                 <div className="flex">
                     <label>
                         <input
@@ -14,7 +23,7 @@ const Form = () => {
                             name="firstName"
                             required
                         />
-                        <span>first name</span>
+                        <span>First Name</span>
                     </label>
 
                     <label>
@@ -24,7 +33,7 @@ const Form = () => {
                             name="lastName"
                             required
                         />
-                        <span>last name</span>
+                        <span>Last Name</span>
                     </label>
                 </div>
 
@@ -33,14 +42,9 @@ const Form = () => {
                         className="input"
                         type="tel"
                         name="phoneNumber"
-                        onKeyPress={(e) => {
-                            if (!/^\d$/.test(e.key)) {
-                                e.preventDefault(); // Block non-digit characters
-                            }
-                        }}
                         required
                     />
-                    <span>contact number</span>
+                    <span>Contact Number</span>
                 </label>
 
                 <label>
@@ -51,43 +55,38 @@ const Form = () => {
                         inputMode="email"
                         required
                     />
-                    <span>email</span>
+                    <span>Email</span>
                 </label>
 
                 <label>
-                    <select
-                        className="input select-service"
-                        name="services"
-                        required
-                    >
-                        <option value="" hidden>
-                            Select Service
-                        </option>
+                    <select className="input select-service" name="services" required>
+                        <option value="" hidden>Select Service</option>
                         <option value="Budgeting">Budgeting</option>
                         <option value="Emergency Planning">Emergency Planning</option>
                         <option value="Retirement Solutions">Retirement Solutions</option>
-                        <option value="Child Education Planning">Child Education Planning</option>
-                        <option value="Wealth Creation & Management">Wealth Creation & Management</option>
+                        <option value="Child Education Planning">
+                            Child Education Planning
+                        </option>
+                        <option value="Wealth Creation & Management">
+                            Wealth Creation & Management
+                        </option>
                         <option value="Risk Management">Risk Management</option>
                     </select>
-                    <span>services</span>
+                    <span>Services</span>
                 </label>
 
                 <label>
-          <textarea
-              className="input"
-              name="message"
-              placeholder="message"
-              rows={3}
-              required
-          />
+                    <textarea
+                        className="input"
+                        name="message"
+                        placeholder="Message"
+                        rows={3}
+                        required
+                    ></textarea>
                 </label>
 
                 <button className="fancy" type="submit">
-                    <span className="top-key"/>
-                    <span className="text">submit</span>
-                    <span className="bottom-key-1"/>
-                    <span className="bottom-key-2"/>
+                    <span className="text">Submit</span>
                 </button>
             </form>
         </StyledWrapper>
