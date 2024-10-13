@@ -119,7 +119,7 @@ const StyledWrapper = styled.div`
     .card__button-wrapper {
         align-self: flex-start;
         margin-top: auto;
-        margin-left: -15px;
+        margin-left: 0;
         margin-bottom: 20px;
     }
 
@@ -177,7 +177,6 @@ const StyledWrapper = styled.div`
 
         .card__button-wrapper {
             margin-top: 5px;
-            margin-left: -12px;
             margin-bottom: 10px; /* Adjust spacing */
         }
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../sections/header.jsx";
 import Footer from "../sections/footer.jsx";
-import ContactComponent from "../components/ContactComponent.jsx";
+import ContactComponent from "../components/ContactUs/ContactComponent.jsx";
 import styled from "styled-components";
 import ContactUsImage from "../assets/Images/img.png";
 

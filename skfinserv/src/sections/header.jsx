@@ -5,6 +5,8 @@ import Logo from "../components/Header/Logo.jsx";
 import Nav from "../components/Header/Nav.jsx";
 import MobileDropDownMenu from "../components/Header/MobileDropdownMenu.jsx";
 
+
+
 const Header = ({ isRootPage }) => {
     const [scroll, setScroll] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -74,11 +76,11 @@ const HeaderWrapper = styled.header`
     font-family: 'Castoro', serif;
     padding: ${({ scroll }) => (scroll ? "15px 20px" : "15px 20px")};
     background-color: ${({ scroll, isRootPage }) =>
-            isRootPage && !scroll ? "transparent" : "white"};
+    isRootPage && !scroll ? "transparent" : "white"};
     transition: background-color 0.3s ease, padding 0.3s ease;
     z-index: 1000;
     box-shadow: ${({ scroll, isRootPage }) =>
-            isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
+    isRootPage && !scroll ? "none" : "0 2px 14px rgba(0, 0, 0, 0.3)"};
 `;
 
 const Container = styled.div`
@@ -110,7 +112,7 @@ const ToggleMenuButton = styled.button`
     display: block;
     position: relative;
     order: 1;
-    left: 30px;
+    left: 3px;
     right: 30px;
 
     @media (min-width: 769px) {
@@ -123,3 +125,4 @@ const ToggleMenuButton = styled.button`
 `;
 
 export default Header;
+

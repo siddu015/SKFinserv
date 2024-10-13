@@ -6,7 +6,7 @@ const PortfolioLogin = () => {
         <PortfolioLoginButton>
             <StyledWrapper>
                 <a href="https://skwealth.investwell.app/app/#/login">
-                    <button className="comic-button"><a href="/"></a> Portfolio Login</button>
+                    <button className="comic-button">Portfolio Login</button>
                 </a>
             </StyledWrapper>
         </PortfolioLoginButton>
@@ -14,6 +14,9 @@ const PortfolioLogin = () => {
 };
 
 const StyledWrapper = styled.div`
+    /* Button styles */
+    
+    
     .comic-button {
         display: inline-block;
         padding: 10px 16px; /* Default padding */
@@ -46,6 +49,9 @@ const StyledWrapper = styled.div`
 
     /* Responsive Styles */
     @media (max-width: 768px) {
+        border: 1px solid transparent;
+        padding: 0.6em 3em;
+        
         .comic-button {
             padding: 10px 16px; /* Smaller padding for mobile */
             font-size: 0.7rem; /* Smaller font size for mobile */

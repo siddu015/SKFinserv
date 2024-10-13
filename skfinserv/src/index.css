@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 
 :root {
@@ -23,6 +24,8 @@
   width: 100%;
   min-width: 350px;
 }
+
+
 
 /* Body styling to ensure full-width alignment */
 body {
@@ -37,64 +40,19 @@ h1 {
   margin: 1em 0;
 }
 
-/* Button styles */
-button {
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
-/* Flex container utility */
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/*img {*/
+/*  max-width: 100%;*/
+/*  height: auto;*/
+/*}*/
 
-/*testing*/
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*!* Flex container utility *!*/
+/*.flex {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
 
-@font-face {
-  font-family: 'chalk';
-  src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'header';
-  src: url('/fonts/FeelingSoon-1GVr0.otf') format('opentype');
-}
-@font-face {
-  font-family: 'foot';
-  src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
-}
-@font-face {
-  font-family: 'heading';
-  src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
-}
-body
-{
-  overflow-x: hidden;
-}
-/* Header styles */
-.header {
-  background-color: #ffffffad;
-  top: 0;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @apply p-4 fixed z-10 backdrop-blur
-}
 
-/* Logo styles */
-.headerimg{
-  width: 250px;
-  height: 60px;
-  padding-right: 20px;
-}
+

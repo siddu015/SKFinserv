@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContactCard from "../components/ContactCard.jsx";
-import PhoneIcon from "../assets/icons/PhoneIcon.png";
-import MailIcon from "../assets/icons/MailIcon.png";
-import LocationIcon from "../assets/icons/LocationIcon.png";
+import ContactCard from "./ContactCard.jsx";
+import PhoneIcon from "../../assets/icons/PhoneIcon.png";
+import MailIcon from "../../assets/icons/MailIcon.png";
+import LocationIcon from "../../assets/icons/LocationIcon.png";
 
 
 const ContactPage = () => {

@@ -27,6 +27,7 @@ const StyledWrapper = styled.div`
   @media (max-width: 768px) {
       font-size: 0.8rem;
   }
+      
   @media (max-width: 430px) {
       font-size: 0.7rem;
   }
@@ -39,8 +40,8 @@ button:hover {
 
 button:focus:after,
 button:hover:after {
-  width: 80%;
-  left: 10%;
+  width: 100%;
+  left: 0;
 }
 
 button:after {

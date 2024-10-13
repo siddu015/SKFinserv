@@ -4,16 +4,8 @@ import styled from "styled-components";
 const Form = () => {
     return (
         <StyledWrapper>
-            <form
-                className="form"
-                method="POST"
-                name="customContact"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-            >
-                <input type="hidden" name="form-name" value="customContact" />
-                <input type="hidden" name="bot-field" /> {/* Honeypot field */}
-
+            <form className="form" method="POST" name="customContact" data-netlify="true">
+                <input type="hidden" name="form-name" value="customContact"/>
                 <div className="flex">
                     <label>
                         <input
@@ -42,7 +34,9 @@ const Form = () => {
                         type="tel"
                         name="phoneNumber"
                         onKeyPress={(e) => {
-                            if (!/^\d$/.test(e.key)) e.preventDefault();
+                            if (!/^\d$/.test(e.key)) {
+                                e.preventDefault(); // Block non-digit characters
+                            }
                         }}
                         required
                     />
@@ -54,6 +48,7 @@ const Form = () => {
                         className="input"
                         type="email"
                         name="email"
+                        inputMode="email"
                         required
                     />
                     <span>email</span>
@@ -65,7 +60,9 @@ const Form = () => {
                         name="services"
                         required
                     >
-                        <option value="" hidden>Select Service</option>
+                        <option value="" hidden>
+                            Select Service
+                        </option>
                         <option value="Budgeting">Budgeting</option>
                         <option value="Emergency Planning">Emergency Planning</option>
                         <option value="Retirement Solutions">Retirement Solutions</option>
@@ -87,10 +84,10 @@ const Form = () => {
                 </label>
 
                 <button className="fancy" type="submit">
-                    <span className="top-key" />
+                    <span className="top-key"/>
                     <span className="text">submit</span>
-                    <span className="bottom-key-1" />
-                    <span className="bottom-key-2" />
+                    <span className="bottom-key-1"/>
+                    <span className="bottom-key-2"/>
                 </button>
             </form>
         </StyledWrapper>
