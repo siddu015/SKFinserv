@@ -124,6 +124,7 @@ const FooterSection = styled.div`
     width: 100%;
 
     h3 {
+        font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: 0.8rem;
     }

@@ -141,6 +141,7 @@ const ContentBlock = styled.div`
     text-align: center;
 
     h2, h3 {
+        font-weight: bold;
         margin: 0;
         font-size: 2rem;
 

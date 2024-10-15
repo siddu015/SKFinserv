@@ -10,13 +10,15 @@ const SlideTwo = () => (
             <p>
                 The journey to your dreams would be well achieved if you plan for them beforehand.
                 Know what you want, when you want, and the rest will fall in place.
-                <br />
+                <br/>
                 <b>Your Dreams. Your Goals. Your Journey. You Drive. We make sure you meet the deadline.</b>
             </p>
-            <HomeButton />
+            <a href="/service/wealth" target="_blank" rel="noopener noreferrer">
+                <HomeButton/>
+            </a>
         </LeftContent>
         <RightContent>
-            <img src={FinancialPlanning} alt="Financial Planning" />
+            <img src={FinancialPlanning} alt="Financial Planning"/>
         </RightContent>
     </SlideContent>
 );

@@ -141,6 +141,7 @@ const Section2 = styled.div`
 `;
 
 const SectionHeading = styled.h1`
+    font-weight: bold;
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 30px;

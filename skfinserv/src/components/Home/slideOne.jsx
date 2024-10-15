@@ -15,7 +15,9 @@ const SlideOne = () => (
             <p>We at SK Wealth walk with you through the journey of life to help you fulfill your dreams.
                 Creating a financial plan helps you see the big picture and enables you to set your priorities right.
                 To us it's not just about planning your finances, it's about planning your lives.</p>
-            <HomeButton />
+            <a href="/service/budgeting" target="_blank" rel="noopener noreferrer">
+                <HomeButton/>
+            </a>
         </LeftContent>
         <RightContent>
             <ImageRow>

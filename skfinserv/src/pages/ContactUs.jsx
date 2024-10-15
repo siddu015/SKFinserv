@@ -15,7 +15,9 @@ const ContactPage = () => {
             </ImageSection>
 
             <ContactContent>
+
                 <ContactComponent />
+
                 <GoogleMapsSection>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.293379553124!2d78.54876999999999!3d14.7524942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb479d18cb9b967%3A0x6ea83bebf754c96f!2sSK%20Finserv%20%7C%20Best%20Mutual%20fund%20Distributor%20l%20Term%20Insurance%20advisor%20l%20Health%20Insurance%20advisor%20in%20Proddatur!5e0!3m2!1sen!2sin!4v1728736512587!5m2!1sen!2sin"
@@ -47,13 +49,15 @@ const ContactContent = styled.div`
     padding: 60px 20px;
 
     @media (max-width: 768px) {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
 
     @media (max-width: 430px) {
-        padding: 30px 20px;
+        padding: 30px 0;
     }
 `;
+
+
 
 const ImageSection = styled.div`
     height: 550px;

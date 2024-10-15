@@ -123,6 +123,7 @@ const SectionHeading = styled.h1`
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 30px;
+    font-weight: bold;
 
     @media (max-width: 768px) {
         font-size: 1.5rem;

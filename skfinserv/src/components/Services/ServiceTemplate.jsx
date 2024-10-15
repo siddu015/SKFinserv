@@ -36,6 +36,7 @@ const Container = styled.div`
 `;
 
 const Heading = styled.h1`
+    font-weight: bold;
     font-size: 2rem;
     margin: 0;
     text-transform: uppercase;
