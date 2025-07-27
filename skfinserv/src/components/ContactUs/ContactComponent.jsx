@@ -24,7 +24,7 @@ const ContactPage = () => {
                             </div>
                             <div>
                                 <img src={MailIcon} alt="Mail Icon" />
-                                <p>mail.skfinserv@gmail.com</p>
+                                <p>mail.finradix@gmail.com</p>
                             </div>
                             <div>
                                 <img src={LocationIcon} alt="Location Icon" />

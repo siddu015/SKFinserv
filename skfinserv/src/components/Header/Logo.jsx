@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LogoComponent = ({ scroll, isRootPage }) => {
-    return <Logo scroll={scroll} isRootPage={isRootPage}>SK Finserv</Logo>;
+    return <Logo scroll={scroll} isRootPage={isRootPage}>Finradix</Logo>;
 };
 
 const Logo = styled.h1`

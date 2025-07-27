@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import WhatsAppWidget from './components/WhatsAppWidget'
 import Services from "./sections/Services.jsx";
 import Footer from "./sections/footer.jsx";
 import Header from "./sections/header.jsx";

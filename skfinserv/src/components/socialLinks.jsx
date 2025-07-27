@@ -116,7 +116,7 @@ const SocialLinks = () => {
                     </a>
                 </div>
                 <div className="socialcontainer">
-                    <a href="https://www.youtube.com/@skfinserv" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@finradix" target="_blank" rel="noopener noreferrer">
                         <div className="icon social-icon-5-5">
                             <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

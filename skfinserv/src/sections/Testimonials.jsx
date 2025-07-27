@@ -12,7 +12,7 @@ const testimonialList = [
             designation: "Customer",
         },
         rating: 5,
-        description: "I have been associated with SK Finserv for over 3 years now. Their guidance and timely advice helped me to plan for my daughter's marriage and my early retirement. They helped me to create wealth as well as protect it through Term Insurance and Health Insurance. I am fully satisfied with their service and knowledge in personal finance. My association with SK Finserv has been rewarding, and I have recommended their services to many friends and relatives."
+        description: "I have been associated with Finradix for over 3 years now. Their guidance and timely advice helped me to plan for my daughter's marriage and my early retirement. They helped me to create wealth as well as protect it through Term Insurance and Health Insurance. I am fully satisfied with their service and knowledge in personal finance. My association with Finradix has been rewarding, and I have recommended their services to many friends and relatives."
     },
     {
         author: {
@@ -21,7 +21,7 @@ const testimonialList = [
             designation: "Customer",
         },
         rating: 4.5,
-        description: "I have chosen SK Finserv as my investment advisor. It’s been a pleasant experience working with Prasanth and his team. He has extensive knowledge on strategic, timely investments and offers great products (Mutual Funds, Insurance, etc.) for consideration. It’s been over 5 years associating with SK Finserv, and I look forward to many more years in reaching my objectives."
+        description: "I have chosen Finradix as my investment advisor. It’s been a pleasant experience working with Prasanth and his team. He has extensive knowledge on strategic, timely investments and offers great products (Mutual Funds, Insurance, etc.) for consideration. It’s been over 5 years associating with Finradix, and I look forward to many more years in reaching my objectives."
     },
     {
         author: {
@@ -30,7 +30,7 @@ const testimonialList = [
             designation: "Customer",
         },
         rating: 4.5,
-        description: "Managing my investments with SK Finserv has been one of the best decisions I’ve made. I was referred to them by a friend and was fortunate enough to have Mr. Prasanth personally oversee my investments. It’s been several years, and my investments have grown despite volatile markets. My trust in their advice has only deepened."
+        description: "Managing my investments with Finradix has been one of the best decisions I’ve made. I was referred to them by a friend and was fortunate enough to have Mr. Prasanth personally oversee my investments. It’s been several years, and my investments have grown despite volatile markets. My trust in their advice has only deepened."
     },
     {
         author: {
@@ -39,7 +39,7 @@ const testimonialList = [
             designation: "Customer",
         },
         rating: 4.5,
-        description: "SK Finserv is truly the best place with the best team to provide excellent investment advice. They have vast knowledge about markets and different types of investment instruments. I’m pleased to say that my investments are in the right place, guided by market experts."
+        description: "Finradix is truly the best place with the best team to provide excellent investment advice. They have vast knowledge about markets and different types of investment instruments. I’m pleased to say that my investments are in the right place, guided by market experts."
     },
     {
         author: {
@@ -48,7 +48,7 @@ const testimonialList = [
             designation: "Customer",
         },
         rating: 4,
-        description: "Three years with SK Finserv has been rewarding. Prasanth's expertise helps me make sound financial decisions. I highly recommend their personal finance services. As a satisfied customer, their commitment truly stands out."
+        description: "Three years with Finradix has been rewarding. Prasanth's expertise helps me make sound financial decisions. I highly recommend their personal finance services. As a satisfied customer, their commitment truly stands out."
     },
     {
         author: {

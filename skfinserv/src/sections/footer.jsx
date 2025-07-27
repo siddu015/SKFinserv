@@ -14,12 +14,12 @@ const Footer = () => {
                 <Container>
                     <FooterSection>
                         <About>
-                            <h3>SK Finserv</h3>
+                            <h3>Finradix</h3>
                             <p>
-                                Welcome to SK Finserv, your trusted financial companion in India. We understand that your financial journey is more than just numbers; it's a story of dreams, aspirations, and the legacy you want to leave behind. At SK Finserv, we believe everyone deserves a secure and prosperous future.
+                                Welcome to Finradix, your trusted financial companion in India. We understand that your financial journey is more than just numbers; it's a story of dreams, aspirations, and the legacy you want to leave behind. At Finradix, we believe everyone deserves a secure and prosperous future.
                             </p>
                             <p>
-                                SK Finserv has been in the field of personal finance and wealth management for over a decade. We make sure every plan is tailored to each client’s current financial situation, future goals, and risk appetite.
+                                Finradix has been in the field of personal finance and wealth management for over a decade. We make sure every plan is tailored to each client's current financial situation, future goals, and risk appetite.
                             </p>
                             <SocialLinks>
                                 <SocialLinks />
@@ -33,7 +33,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <img src={MailIcon} alt="" />
-                                <p>mail.skfinserv@gmail.com</p>
+                                <p>mail.finradix@gmail.com</p>
                             </div>
                             <div>
                                 <img src={LocationIcon} alt="" />
@@ -55,9 +55,9 @@ const Footer = () => {
                 <DContainer>
                     <DisclaimerSection>
                         <DisclaimerText>
-                            <p className="bold-text">SK Finserv is an AMFI Registered Mutual Fund Distributor.</p>
+                            <p className="bold-text">Finradix is an AMFI Registered Mutual Fund Distributor.</p>
                             <p>Disclaimer - Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved.</p>
-                            <p>SK Finserv makes no warranties or representations, express or implied, on products offered through the platform of SK Finserv. It accepts no liability for any damages or losses, however, caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable. Investments in Securities markets are subject to market risks, read all the related documents carefully before investing.</p>
+                            <p>Finradix makes no warranties or representations, express or implied, on products offered through the platform of Finradix. It accepts no liability for any damages or losses, however, caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable. Investments in Securities markets are subject to market risks, read all the related documents carefully before investing.</p>
                         </DisclaimerText>
                         <ImagesWrapper>
                             <img src={AMFI} alt="AMFI Registered" />
@@ -70,7 +70,7 @@ const Footer = () => {
 
             <FooterBottom>
                 <Container>
-                    <Left>&copy; 2023 SK Finserv | All rights reserved</Left>
+                    <Left>&copy; 2023 Finradix | All rights reserved</Left>
                     <Middle>Privacy Policy</Middle>
                     <Right>Designed & Developed by Srinath Reddy</Right>
                 </Container>

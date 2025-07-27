@@ -28,14 +28,14 @@ const AboutUs = () => {
                                 Our "Dream It - Plan It" ideology has helped us in keeping the client's interest at the
                                 forefront, thereby establishing a long-term trustworthy relation.
                                 We are a handful of people who are passionate about what they do.
-                                SK Finserv was founded over a decade ago and since then a consistent and adaptable team
-                                has been a key factor for SK Finserv.
+                                Finradix was founded over a decade ago and since then a consistent and adaptable team
+                                has been a key factor for Finradix.
                             </p>
                         </ContentBlock>
                         <ContentBlock>
                             <h2>Success Stories so far</h2>
                             <p>
-                                With 1500+ happy families across boundaries, SK Finserv has been managing 50+ crores of
+                                With 1500+ happy families across boundaries, Finradix has been managing 50+ crores of
                                 assets in the current F.Y.
                             </p>
                         </ContentBlock>
